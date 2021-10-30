@@ -52,6 +52,8 @@ cf)캡틴판교: https://joshua1988.github.io/web-development/vuejs/vuejs-tutori
 
    cf)참조: https://joshua1988.github.io/web-development/vuejs/vuejs-tutorial-for-beginner/#mvvm-%ED%8C%A8%ED%84%B4%EC%9D%B4%EB%9E%80
 
+   ![image](https://user-images.githubusercontent.com/53415000/139377854-b9126722-4d6b-4767-b889-562d86b866e8.png)
+   
 
  - Axios
 
@@ -80,7 +82,9 @@ cf)캡틴판교: https://joshua1988.github.io/web-development/vuejs/vuejs-tutori
 
    cf)참조: https://joshua1988.github.io/web-development/vuejs/vuejs-tutorial-for-beginner/#mvvm-%ED%8C%A8%ED%84%B4%EC%9D%B4%EB%9E%80
 
-
+    ![image](https://user-images.githubusercontent.com/53415000/139378100-1a097d48-bb75-46de-9e28-d24a7fdf6296.png)
+    
+    
  - Vue Loader
 
    -> 싱글 파일 컴포넌트를 브라우저에서 실행할 수 있게 자바스크립트 파일로 변환해주는 웹팩 로더. 뷰 로더를 사용하면 아래의 장점이 있다.
