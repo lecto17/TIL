@@ -75,7 +75,7 @@ cf)
 
 11. 컴포넌트 태그에서 v-model 여러 개 사용
 
-![image](https://user-images.githubusercontent.com/53415000/139870163-a3dc3650-cfb5-4f82-b360-144a98d19da3.png)
+     ![image](https://user-images.githubusercontent.com/53415000/139872654-b318def0-03d5-42a9-9ad6-d8f3acade004.png)
 
 cf)사진 참조: https://joshua1988.github.io/web-development/vuejs/vue3-coming/#vue-3-%ED%9B%91%EC%96%B4%EB%B3%B4%EA%B8%B0---%EA%B8%B0%EB%B3%B8-%EB%AC%B8%EB%B2%95-%ED%8E%B8
 
@@ -126,8 +126,8 @@ cf)사진 참조: https://joshua1988.github.io/web-development/vuejs/vue3-coming
    -> 반응성이란 "변경"에 대한 제어를 선언적으로 수행하는 프로그래밍 패러다임
    
    (나에겐 한번에 이해를 못하는 어려운 말.. 아래 예시 참조)
-   
-   ![image](https://user-images.githubusercontent.com/53415000/139686559-efb64238-ec6d-4e17-affe-7ec227b3640e.png)
+      
+   ![image](https://user-images.githubusercontent.com/53415000/139872905-7bf1031e-0f10-4fdb-96e9-617673eb2fe7.png)
 
 
    -> 자바스크립트에서 이러한 반응을 하게 하려면 아래와 같이 해야한다.
