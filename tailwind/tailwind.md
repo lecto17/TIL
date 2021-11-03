@@ -7,7 +7,28 @@
       - 4: 0.25 * 4 => 1rem
 
         ex) mx-5: 1.25rem (margin-right, margin-left에만)
+   
+   - tailwind 클래스 예시
+   
+     /* width */
 
+      w-full <=> width: 100%
+
+      w-screen <=> width: 100vw;
+
+      w-min <=> width: min-content;
+
+      w-max <=> width: max-content;
+
+      <br/>
+
+     /* height */
+
+      h-full <=> height: 100%
+
+      h-screen <=> height: 100vh;
+
+      <br/>
 
    - tailwind.config.js 설정 파일
       
