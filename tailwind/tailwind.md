@@ -1,6 +1,6 @@
 * tailwind 속성
 
-   - tailwind8버전: cf) https://tailwindcss.com/docs/just-in-time-mode
+   - tailwind8 버전: cf) https://tailwindcss.com/docs/just-in-time-mode
 
    - bottom-full
 
