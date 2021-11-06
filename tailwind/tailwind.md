@@ -1,5 +1,45 @@
 * tailwind 속성
 
+   - tailwind8버전: cf) https://tailwindcss.com/docs/just-in-time-mode
+
+   - bottom-full
+
+   - inset-x-0
+
+   - justify-end <=> justify-content: flex-end
+
+    컨테이너 최하단으로 정렬(오른쪽으로도 정렬을 할 수 있나 봄)
+
+    https://ipex.tistory.com/entry/CSS3-flex-Box-justifycontent-alignitems
+
+    ![flex-end_start_center](/uploads/bac98ba87ee35a451b3d8703c39326a4/flex-end_start_center.png)
+
+   - space-(between, around, evenly, stretch)차이
+
+   cf) https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+
+   - object-cover
+
+   - col-start-(), col-end-(), row-start-(), row-end-() 해석..
+
+   - flex-shrink-0: 자동으로 아이템 너비가 축소되지 않기 위한 것.
+
+    cf) https://blogpack.tistory.com/863
+
+   - flex-basis
+
+    cf) https://developer.mozilla.org/ko/docs/Web/CSS/flex-basis
+
+   - aspect-ratio: https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio
+
+    /* offset-x | offset-y | blur-radius | *`spread-radius`* | color */
+
+     `box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);`
+
+     `<spread-radius>`:   
+
+     1px는 length 값입니다. 양수 값은 그림자가 더 커지고 확산하며, 음수 값은 그림자가 줄어듭니다. 기본값은 0(그림자와 요소 크기 동일)입니다.
+
    - mx-4: margin을 x축으로만 준다.
 
       - margin을 x축으로만(left, right) 준다.
