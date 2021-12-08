@@ -1,6 +1,22 @@
 ** css 상식 
 
- - 첫글자에만 CSSS로 색상 넣기
+ - white-space(tailwind로 알아보는)
+ 
+   normal
+
+    ![image](https://user-images.githubusercontent.com/53415000/145217567-8ae8e022-5e55-4c90-bc87-70f25e8348e0.png)
+
+ 
+   nowrap
+
+    ![image](https://user-images.githubusercontent.com/53415000/145217696-e2bd6fc2-33ec-4f52-add4-aacb5d236d0a.png)
+
+   pre
+
+    ![image](https://user-images.githubusercontent.com/53415000/145217838-55318c6a-6c57-4a2a-9915-98378e5fcabb.png)
+
+
+ - 첫글자에만 CSS로 색상 넣기
 
  ::first-letter 의사 클래스로 첫글자만의 색상을 넣을 수 있다.
 
@@ -13,7 +29,7 @@
 
  그런데.. 내가 css로 색상을 넣고 싶었던 문자는 * 이 별표 친구였는데, * 친구는 좀 뭔가 이상했다.. 
 
- 'title *' 에서 * 에 색상을 넣기 위해 '* eltit'의첫 글자에 색상을 넣은 후 뒤집으려고 했으나.. 색상 적용이 생각처럼 되지 않았다. * 는 띄어쓰기 없이 다른 글자가 붙어 있어야 *와 그 글자의 색삭을 변경할 수 있었다.. 결론적으론 * 하나에만 색상을 적용할 수 없었다..
+ title * 에서 * 에 색상을 넣기 위해 '* eltit'의첫 글자에 색상을 넣은 후 뒤집으려고 했으나.. 색상 적용이 생각처럼 되지 않았다. * 는 띄어쓰기 없이 다른 글자가 붙어 있어야만 *와 그 붙어있는 글자의 색상을 변경할 수 있었다.. 결론적으론 * 하나에만 색상을 적용할 수 없었다..
 
  그러다 ::after 의사 클래스를 찾아보게 됬고, ::after { content: "*"; color: red; }로 적용하여 원하는 상황을 만들 수 있었다.
 
