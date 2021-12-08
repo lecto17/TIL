@@ -33,3 +33,26 @@
  - 최초 컴포넌트 로드할 때 페이지 버튼이 출력되지 않다가, 다음 페이지 버튼 클릭할 경우, 숫자로 된 페이지가 출력되는 문제.. 
  
    - computed 속성으로 페이지를 만들도록 되었는데, 이 때 computed 함수 내에서 사용되는 데이터를 pager-control 컴포넌트에서 pageCount 라는 props를 total로(:total="pageCount") 내려 페이지를 표시하도록 만들었다. 그런데 이 pageCount는 list 값(list 내 데이터 갯수가 변화될 때, pageCount 값도 재계산 된다)이 변동됨에 따라, 재계산되는 변수였는데, 이 값의 변화를 pager-control 컴포넌트에서 인식을 못하는 상황이였다. 이 문제는 pager-control 컴포넌트에서 props로 전달받는 total 변수를 watch값으로 설정하여 해당 변수의 값 변경을 캐치해서 page 계산을 하는 resetList()를 호출했어야 하는데, 해당 watch()에서 resetList 함수 이름만 써놓아서 발생한 문제(resetList()가 아닌, resetList..).
+
+ - 객체 내 속성에 반응성 주입
+
+   - 객체 내 속성에 반응성을 주입하여, 해당 속성의 값이 변경될 때를 이용하여 로직을 만드는 코드를 접하였다.
+   
+   - 그런데 정작 객체 내 속성에 반응성이 주입되지 않는 문제로 null 오류가 발생하였다.
+   
+   - 이 문제를 해결하기 위해 객체 내 속성을 반응성을 갖도록 생성해줘야 했다.
+   
+   - 참고 사이트는 아래와 같고, 간단하게 예시를 들어 다음에 볼 때 잊지 않도록 해야겠다.
+   
+   - 예시) useHome.js에서 정의된 userInfo 객체를 Home 컴포넌트에서 사용하며, userInfo 객체 내에 userId 속성의 변화에 따른 작동을 하려고 하는 경우
+   
+   ![image](https://user-images.githubusercontent.com/53415000/145215484-268f4b36-8bb9-4363-9d52-07281d6a3a2c.png)
+   
+     -> 객체에 reactive를 감싸주고, 사용할 객체 내 속성을 toRefs로 꺼내 반응성을 주입한다.
+
+   
+   - 참고 사이트 
+   
+   - 1. https://v3.ko.vuejs.org/guide/reactivity-fundamentals.html#%E1%84%87%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%B3%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BC-%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2-%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9-%E1%84%87%E1%85%AE%E1%86%AB%E1%84%92%E1%85%A2%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5-destructuring
+   
+   - 2. https://stackoverflow.com/questions/66504701/how-to-make-a-vue-3-object-property-reactive
