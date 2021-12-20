@@ -29,6 +29,8 @@
    last-child는 부모 엘리먼트를 기준으로 last element에 접근하여 속성을 적용하게 된다. 아래의 stackoverflow에서 나와 있는 것처럼 not VERY LAST가 아닌 경우에는 속성 적용이 되지 않는다.
    
    ![image](https://user-images.githubusercontent.com/53415000/146785294-33b3dc9b-bf91-4ddb-a508-45dcb3ada07a.png)
+   
+   // 참고: https://stackoverflow.com/questions/18995362/last-child-not-working-as-expected
 
    not VERY LAST 하지 않기에 속성이 적용되지 않는다는 것은 위의 예시처럼 a태그가 속해 있는 부모 엘리먼트에 마지막 요소가 a 태그가 아닌 div 태그이기에 a:last-child에서 정의한 속성이 의도했던 a태그의 마지막 요소에 적용되지 않는다.
    
