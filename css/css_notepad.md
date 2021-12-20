@@ -16,6 +16,31 @@
     ![image](https://user-images.githubusercontent.com/53415000/145217838-55318c6a-6c57-4a2a-9915-98378e5fcabb.png)
 
 
+ - last-child
+
+   last-child 의사 클래스로 게시글의 마지막 요소의 border-bottom-left/right-radius에 값을 주려고 했다. 하지만 의도했던 대로 되지 않아 last-child 특성에 대해 정리하고 넘어가려고 한다.
+   
+   문제 상황)
+   
+   ![image](https://user-images.githubusercontent.com/53415000/146784398-56540af0-955f-4d7d-8d3b-44c68bd300c7.png)
+   
+     -> 마지막 cs-article에 접근해 style을 적용하려고 했지만, .cs-article:last-child로 정의한 style이 적용되지 않았다.
+     
+   last-child는 부모 엘리먼트를 기준으로 last element에 접근하여 속성을 적용하게 된다. 아래의 stackoverflow에서 나와 있는 것처럼 not VERY LAST가 아닌 경우에는 속성 적용이 되지 않는다.
+   
+   ![image](https://user-images.githubusercontent.com/53415000/146785294-33b3dc9b-bf91-4ddb-a508-45dcb3ada07a.png)
+
+   not VERY LAST 하지 않기에 속성이 적용되지 않는다는 것은 위의 예시처럼 a태그가 속해 있는 부모 엘리먼트에 마지막 요소가 a 태그가 아닌 div 태그이기에 a:last-child에서 정의한 속성이 의도했던 a태그의 마지막 요소에 적용되지 않는다.
+   
+   a 태그인 것에만 접근해서 그중에 마지막 엘리먼트에 접근하겠다고 한 건데, div 태그가 있는 것과 무슨 상관이 있는 건가 생각했지만, last-child 의사클래스 작동 방식이 그렇다는걸 받아들이게 됬다. last-child 뿐 아니라, last-of-type / nth-last-child에도 위에서 말한 동일한 특성이 적용되고 있다.
+   
+   이 삽질로 오래동안 시간을 뺏겼지만, 결국에는 cs-article을 감싸는 wrappper 클래스를 만들어 그 wrapper 클래스의 first/last-child 에 접근하여 속성을 적용하여 문제를 해결하였다..
+   
+   참 재미있는 css이다.. 이러한 css 기본 내공을 쌓는게 중요하다는 생각이든다. 아래의 사이트가 기본적인 내용에 대해 자세히 나와 있어 정독하고, 정리 글을 남겨야 겠다.
+   
+   css 선택자 정리 잘되어있는 사이트: https://www.nextree.co.kr/p8468/
+
+
  - 첫글자에만 CSS로 색상 넣기
 
  ::first-letter 의사 클래스로 첫글자만의 색상을 넣을 수 있다.
