@@ -1,5 +1,50 @@
 ** css 상식 
 
+ - 말풍선(speeech bubble) 만들기
+
+   말풍선 메뉴를 만들고 그 위에다 메뉴 버튼들을 만드는 상황이 있었는데, 말풍선 이미지가 제플린에 이미지로 올려져 있지 않았다. 이 상황으로 말풍선 이미지를 직접 svg 파일을 만들어 진행하려고 하였는데, css로 만들 수 있다는 팀장님의 말씀을 듣고, css로 말풍선 메뉴를 만들게 되었다. <b>이미지를 만들기 전에, css로 만들 수 없는지를 먼저 확인해봐야겠다는 생각을 하게 됬다.</b>
+   
+  말풍선을 만들며 참고한 사이트는 아래와 같다.
+   
+   1. https://www.thewordcracker.com/miscellaneous/add-speech-bubbles-easy-with-css/
+   
+   ![image](https://user-images.githubusercontent.com/53415000/146791220-47211b7a-a99c-4db1-a1f0-4f93c9f5b766.png)
+
+     -> 직접 말풍선 모양을 설정하면, 해당하는 css 코드를 제공한다.
+
+   2. http://happycgi.com/16725
+   
+   말풍선을 css로 만들 수 있다는 것이 신기해서 코드를 짚고 넘어가보려고 한다.
+   
+   먼저 말풍선을 만들며, 상황을 2가지로 구분했었다.
+   
+     1. 말풍선에 border를 입히는 경우
+     
+   ![image](https://user-images.githubusercontent.com/53415000/146792071-e62eb1bf-09cb-4459-9e36-7b6f50fd7ce8.png)
+     
+     2. 말풍선에 border를 입히지 않는 경우
+     
+   ![image](https://user-images.githubusercontent.com/53415000/146791983-665c19ab-d655-4997-bc8f-d83c09e90b20.png)
+   
+   
+   이렇게 상황을 구분한 이유가, css 코드가 달라진다는 생각을 했었고 실제로 구현한 코드를 봤을 때에도 큰 차이는 아니지만, 코드 구현에 차이가 있었다.
+   
+   border가 있는 경우에는 before 의사 클래스로 삼갹형의 borer를 그린 후에, after 의사 클래스로 삼각형에 배경이 되는 부분을 덧칠하는 과정으로 작업을 하였다.
+   
+   아래의 코드를 보며 어떻게 css로 말풍선을 만들 수 있었는지 존경(?)의 마음을 갖게 되었던 것 같다..
+   
+   ![image](https://user-images.githubusercontent.com/53415000/146793121-9257df62-4f34-44b9-94b6-9c52f4676ae4.png)
+   
+   css로 삼각형을 만드는 것이 관건인데, 이를 이해하기 위해서 다음 사이트를 참고했다. 
+   
+    cf) http://uxuiz.cafe24.com/wp/archives/4619
+    
+    위 사이트에서 말하길, border를 그릴 때 보더의 모서리 부분에 대각선으로 경계가 구분되게 된다고 한다. 이 속성을 이용해 삼각형을 만들 수 있다고 한다. 
+    
+    한번에 이해가 되지는 않지만, 반복해서 이 코드를 접하면서 이해해야 될 것 같다.
+
+   
+
  - white-space(tailwind로 알아보는)
  
    normal
