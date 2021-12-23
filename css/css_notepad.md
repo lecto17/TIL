@@ -2,15 +2,23 @@
 
  - self-start(<=> align-self: flex-start)
 
+   ![image](https://user-images.githubusercontent.com/53415000/147236592-a44c2f31-4ff2-4ff2-891b-37f3b3790d42.png)
+  
+   ![image](https://user-images.githubusercontent.com/53415000/147236627-3dba0542-a29a-4b87-9f03-46a86f67ac52.png)
+  
+  - items-stretch(<=> align-items: stretch;)
+
+    부모가 flex일 떄, 그 부모에 맞게끔 늘리는 성질
+
+    ![image](https://user-images.githubusercontent.com/53415000/147237330-b38a1e07-ea95-4db3-9aa0-3635672ed15a.png)
+
 
 
  - flex-shrink-0
  
    사진 업로드를 하는 곳에서 많은 사진을 올린 경우, 사진들이 좁은 공간에 몰려 사진들이 찌부되는 현상을 발견하고 이를 해결하기 위해 해당 영역에 커스텀 스크롤 바를 적용하려고 하였다.
    
-   커스텀 스크롤 바를 해당 영역에 붙였는데도, overflow-x-auto 값이 적용되지 않아 고생하였다. 이 경우에 사진들 담고 있는 div에 flex-shrink-0 값을 주어 사진 영역이 줄어들지 않도록 하였을 때,
-   
-   커스텀 스크롤가 적용되었다.
+   커스텀 스크롤 바를 해당 영역에 붙였는데도, overflow-x-auto 값이 적용되지 않아 고생하였다. 이 경우에 사진들 담고 있는 div에 flex-shrink-0 값을 주어 사진 영역이 줄어들지 않도록 하였을 때, 커스텀 스크롤가 적용되었다.
    
    ![image](https://user-images.githubusercontent.com/53415000/147097670-af147346-4fe0-4edb-8af1-ebd3b55b2a5b.png)   
    
