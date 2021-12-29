@@ -1,6 +1,6 @@
 * Vue에 GA(Google Analytics)
 
-  프로젝트에 Google Analytics를 붙이라고 하시고, 참고하라는 사이트(https://velog.io/@bluestragglr/Vue.js%EC%97%90-Google-Analytics-%EB%B6%99%EC%9D%B4%EA%B8%B0)까지 친절하게 알려주셔서 해당 작업을 하게 되었다.
+  프로젝트에 Google Analytics를 붙이라고 하시고, 참고하라는 사이트(https://velog.io/@bluestragglr/Vue.js%EC%97%90-Google-Analytics-%EB%B6%99%EC%9D%B4%EA%B8%B0) 까지 친절하게 알려주셔서 해당 작업을 하게 되었다.
 
   작업을 하며 사이트에서는 vue-analytics라는 라이브러리를 사용하여 GA version 3를 붙여놓았지만, vue-analytics 라이브러리를 통해 현재 사용되는 GA 4에서 사용하는 'G-XXXXXX'라는 특성을 할 수없다고 나와 있었으며, 추후 포스팅을 한다고 하여 GA 4를 지원하는 vue 라이브러리를 다시 서칭하게 되었다.
 
