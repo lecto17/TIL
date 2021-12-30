@@ -56,3 +56,16 @@
   ```
 
   그리고 프로젝트에 GA가 붙여졌는지 확인하기 위해서는 위 사이트에서 말한 방법으로 확인할 수 있는데 크롬 extension( https://chrome.google.com/webstore/detail/tag-assistant-legacy-by-g/kejbdjndbnbjgmefkgdddjlbokphdefk?hl=ko )를 추가하여 확인할 수 있다.
+
+  <br/>
+  몇일이 지나고..
+
+  프로젝트에 붙인 ga에 뭐 좀 봐달라고 하시는 호출이 왔다. 문제의 상황은 아래와 같다.
+
+  위 사진을 받고 검색해본 결과 대체로 두가지의 답변이 대다수였다.
+
+   1) 크롬 광고 차단(AdBlock) 확장 프로그램이 설치되었을 경우, 해당 확장 프로그램에서 GA를 막는 경우가 있다고 하여 광고 차단 확장 프로그램을 종료하는 방법
+
+   2) gtag.js 설정 파일에서 transport_url이'https://www.example.com/g/collect' or 'https://www.example.com'이 맞는지 확인
+
+   당면한 상황도 1번을 확인함으로써, 해결할 수 있었다.
