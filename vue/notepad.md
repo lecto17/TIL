@@ -1,5 +1,20 @@
 **vue project 하며 겪는 실수들을 올립니다.**
 
+ - Extraneous non-props attributes were passed to component but could not be automatically inherited 라는 warning 상황
+
+   해당 warning은 vue 파일에 단일 루트 엘리먼트가 아닌 multi root element로 구성되어 있어 발생하였다.
+
+   ```
+     <template>
+       <div></div>
+       <div></div>
+     </template>
+
+     와 같이 template 밑에 복수 개의 root element가 존재하기에 발생한다.
+
+     그런데 vue3에서 부터는 multi root element를 지원한다고 했는데, 왜 이런 warning이 발생하는지는 찾아봐야 겠다.
+   ```
+
  - vuex
    
    분명히 회사에서는 vuex의 useStore()를 활용하여 store를 불러와 사용했는데, 내가 진행했던 프로젝트에서는 useStore()를 불러오지 못하는 상황..
