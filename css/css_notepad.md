@@ -1,5 +1,9 @@
 ** css 상식 
 
+ - overflow-wrap: break-word vs word-break: break-word
+
+
+
  - self-start(<=> align-self: flex-start)
 
    ![image](https://user-images.githubusercontent.com/53415000/147236592-a44c2f31-4ff2-4ff2-891b-37f3b3790d42.png)
