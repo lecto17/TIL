@@ -2,6 +2,9 @@
 
  - overflow-wrap: break-word vs word-break: break-word
 
+  ![image](https://user-images.githubusercontent.com/53415000/148054710-437d9cfe-88df-4e64-9bdb-00cf77492887.png)
+  
+  요약해서 정리하자면,
 
 
  - self-start(<=> align-self: flex-start)
