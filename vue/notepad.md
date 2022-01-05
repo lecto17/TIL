@@ -1,5 +1,9 @@
 **vue project 하며 겪는 실수들을 올립니다.**
 
+ - onMounted 내에서 async 함수를 사용해서 element를 못가져와 생긴 일
+
+   onMounted() 내에서 popup 리스트를 가져오는 함수를 async-await를 이용해 가져오게 됬다. 정확하게는 popup 리스트 가져오는 함수 내에서 store index.js의 actions 내에 있는 함수를 await store.dispatch("팝업 리스트 가져오는 함수명") 사용하였고 이후그 함수(popup 리스트를 가져오는 함수) 내부에서 html 돔을 가져와 쿠키에 설정된 정보를 바탕으로 popup을 띄우지 않도록 작업하였다. 그런데 html 돔을 가져오지 못하는 현상이 있었는데, 이유는 async 함수 내에서 돔을 조작하였기 때문이다. 따라서 async 함수 내에서 dom을 접근하는 것이 아니라, async-await 함수 내에서 로직 처리가 끝난 후 .then으로 dom을 접근할 수 있다.
+
  - Extraneous non-props attributes were passed to component but could not be automatically inherited 라는 warning 상황
 
    해당 warning은 vue 파일에 단일 루트 엘리먼트가 아닌 multi root element로 구성되어 있어 발생하였다.
