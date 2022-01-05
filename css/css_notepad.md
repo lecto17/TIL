@@ -8,6 +8,12 @@
 
   - overflow-wrap: word-break (<=> break-words, tailwind에서 같은 표현)
 
+  ![image](https://user-images.githubusercontent.com/53415000/148173454-68534762-d8a0-4cd3-b7a5-2e24a9bee215.png)
+
+  - word-break: break-all(<=> break-all, tailwind에서 같은 표현)
+
+  ![image](https://user-images.githubusercontent.com/53415000/148173592-974f5060-aa95-49a8-b6ec-e0a81ecb9609.png)
+
 
   - word-wrap: word-break
 
