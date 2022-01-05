@@ -6,6 +6,12 @@
   
   요약해서 정리하자면,
 
+  - overflow-wrap: word-break (<=> break-words, tailwind에서 같은 표현)
+
+
+  - word-wrap: word-break
+
+
 
  - self-start(<=> align-self: flex-start)
 
