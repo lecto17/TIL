@@ -1,3 +1,37 @@
+* 일급 함수란 ?
+
+  - 함수를 다른 변수와 동일하게 다루는 언어는 <b>일급 함수</b>를 가졌다고 말한다.
+  
+  - 함수를 값으로 담을 수 있어 변수에 함수를 값으로 넣기도 한다.
+  
+  - 함수의 전달인자로 함수를 전달할 수 있다.
+
+    ```
+      const temp = function() {
+          console.log("it's temp");
+      }
+      
+      temp(); // 변수를 사용한 호출, 'it's temp' 출력
+      
+      const hello = function() {
+          return function() {
+              console.log("HELLO")
+          }
+      }
+      
+      hello()(); // "HELLO" 출력
+      
+      function add(a) {
+          return function(b) {
+              return a + b;
+          }
+      }
+      
+      let sum10 = add(10);
+      sum10(20); // 30 출력
+    ```
+
+
 * 순수 함수란 ?
 
   - 순수함수의 조건
