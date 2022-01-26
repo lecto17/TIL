@@ -1,5 +1,24 @@
 ** css 상식 
 
+ - word-break와 word-wrap의 차이 
+
+   이 정도까지 알아야 싶나 하지만, 혹시나 하는 마음에 어느정도 큰 틀만 알고 다음에 다시 보기 위해 해당 내용 관련해서 캡처한 것을 올린다.
+   
+   참고 사이트: cf)https://wit.nts-corp.com/2017/07/25/4675
+   
+   word-break 속성:
+
+   ![image](https://user-images.githubusercontent.com/53415000/148174541-7ef24ee2-1588-4402-b762-cb344f2eb525.png)
+      
+   
+   <br/>
+   word-wrap 속성:
+   
+   ![image](https://user-images.githubusercontent.com/53415000/148174651-87321c04-a87c-4d0f-a82e-52fac866c9c9.png)
+   
+   미세한 차이가 있는 듯하다.
+
+
  - overflow-wrap: break-word vs word-break: break-word
 
   ![image](https://user-images.githubusercontent.com/53415000/148054710-437d9cfe-88df-4e64-9bdb-00cf77492887.png)
@@ -7,6 +26,12 @@
   요약해서 정리하자면,
 
   - overflow-wrap: word-break (<=> break-words, tailwind에서 같은 표현)
+
+  ![image](https://user-images.githubusercontent.com/53415000/148173454-68534762-d8a0-4cd3-b7a5-2e24a9bee215.png)
+
+  - word-break: break-all(<=> break-all, tailwind에서 같은 표현)
+
+  ![image](https://user-images.githubusercontent.com/53415000/148173592-974f5060-aa95-49a8-b6ec-e0a81ecb9609.png)
 
 
   - word-wrap: word-break
