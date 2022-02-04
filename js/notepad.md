@@ -1,3 +1,21 @@
+* JSON(JavaScript Object Notation)
+
+  - 데이터를 표시하는 포맷
+
+  - 자바스크립트로부터 파생되어 js 구문의 형식을 따르지만, 독립적인 데이터형 포맷이다, 따라서 c, c++, java, python 등 다양한 pl에서 활용가능
+
+  - key: value 형식으로 포맷이 정해져 있으며, 주로 비동기 브라우저/서버통신을 위해 사용된다.
+
+  - JSON.parse(): JSON 포맷으로 되어 있는 문자열을 JSON 객체로 변환시킨다. JSON.parse(문자열) 
+
+  cf) JSON.parse() return 값은 Object / 이로 인해 JSON.parse()의 결과는 늘 객체형태라고 생각했는데, JSON.parse(JSON.stringify([a, b, c]))의 결과값은 [a, b, c], 배열이다.
+
+  - JSON.stringify(): 인수로 전달받은 자바스크립트 객체를 문자열로 변환하여 반환.
+
+  - JSON.toJSON(): js의 Date 객체의 데이터를 JSON 형식의 문자열로 변환하여 반환. 따라서 Date.prototype 객체에서만 이 메서드를 사용할 수 있다.
+
+
+
 * Array.prototype.slice()
   
   - slice() 메서드는 어떤 배열의 begin부터 end까지(end 미포함)에 대한 얕은 복사본을 새로운 배열 객체로 반환합니다. 원본 배열은 바뀌지 않습니다.
