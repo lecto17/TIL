@@ -1,3 +1,39 @@
+* Array.prototype.slice()
+  
+  - slice() 메서드는 어떤 배열의 begin부터 end까지(end 미포함)에 대한 얕은 복사본을 새로운 배열 객체로 반환합니다. 원본 배열은 바뀌지 않습니다.
+
+	```
+	  ex) 
+	    let a = ['aa', 'bb'];
+	    let b = a.slice();
+
+	    console.log(b); // ['aa', 'bb']
+	    
+	    b[0] = 'xx';
+	    console.log(b); // ['xx', 'bb']
+	    console.log(a); // ['aa', 'bb']
+	```
+
+  - <b>begin(첫 인자)</b>
+
+    - slice의 첫시작으로(begin) 음수가 들어왔을 경우, 배열의 끝에서부터의 길이를 나타낸다.
+
+    - begin이 배열의 길이보다 큰 경우, 빈 배열을 return
+
+    - begin이 undefined인 경우, 0번 인덱스부터 slice
+
+    ```
+      sthArray.slice(-2); // 배열에서 마지막 두개의 element 추출
+    ```
+
+  - <b>end(두번째 인자)</b>
+
+    - 음수 인덱스는 배열의 끝에서부터의 길이를 나타낸다. 예를 들어 slice(2, -1)는 세번째(=2번 인덱스)부터 끝에서 두번째 요소까지 추출한다.
+
+    - end가 생략되면 slice()는 배열의 끝까지(arr.length) 추출한다.
+
+    - end 값이 배열의 길이보다 크면, slice()는 배열의 끝까지 추출한다.
+
 * 일급 함수란 ?
 
   - 함수를 다른 변수와 동일하게 다루는 언어는 <b>일급 함수</b>를 가졌다고 말한다.
