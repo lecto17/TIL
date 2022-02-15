@@ -1,4 +1,29 @@
 ** css 상식 
+ - css와 sass(Syntatically Awesome Style Sheets) 차이
+   
+   css를 사용해 style을 적용할 경우,
+
+     1. 선택자(Selector)를 지정할 때, 불필요한 부모 요소 선택자를 매번 적어야 한다.
+
+     2. 프로젝트 규모가 커져감에 따라 중복해서 수정해야 되는 부분이 늘어난다. 가령, 반복적으로 사용된 부모 요소 선택자의 이름이 변경 된 경우.
+
+     3. 연산 기능에 한계가 있다.
+
+     4. 구문이 존재하지 않는다.
+
+   -> 따라서 sass는 css의 태생적 한계를 보완하기 위해 아래와 같은 기능을 제공한다.
+
+     1. 변수의 사용
+
+     2. 조건문과 반복문
+
+     3. import
+
+     4. 중첩(nesting)
+
+     5. mixin
+
+     6. extend / inheritance
 
  - word-break와 word-wrap의 차이 
 
