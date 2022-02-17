@@ -1,3 +1,18 @@
+* console.log와 console.dir
+
+  [console.log]
+
+    - 요소를 HTML과 같은 트리 구조로 출력
+
+    - DOM 요소에 대해 특별한 처리를 제공
+
+  [console.dir]
+
+    - 요소를 JSON과 같은 트리 구조로 출력
+
+    - Dom 요소에 대한 특별한 처리를 제공하지 않는다.
+
+<br/>
 * JSON(JavaScript Object Notation)
 
   - 데이터를 표시하는 포맷
