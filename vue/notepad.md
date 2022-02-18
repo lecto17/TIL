@@ -27,6 +27,12 @@
 
    npm uninstall vuex로 삭제 후 npm i vuex@4.0.0으로 특정 버젼을 설치한 결과, 정상 작동하였다.
 
+   - pinia: vuex 대용으로 사용되고 있는 vue 상태관리 라이브러리(참조: https://www.youtube.com/watch?v=LfWpPRId5N0)
+
+     - pinia(피냐)의 경우, multiple data store가 존재하는 반면, vuex에서는 하나의 store만 존재. vuex submodule들이 존재하였지만, 이것들은 하나의 store를 사용하였지만, 피냐의 경우에는 각각의 submodule들이 store를 가질 수 있다고 한다. 따라서 컴포넌트 별로 필요한 store를 세분화해서 가져오는 code spliting이 가능하며, typescript 적용에 더 용이하다고 한다.
+
+     - vuex에서는 state / mutations / actions / getters 이렇게 총 4개가 존재한 반면, pinia에서는 mutations를 제외한 3개만 존재한다고 한다. 
+
 
  - vue 개발자 도구에서 vue 탭이 활성화 되지 않는 문제
 
