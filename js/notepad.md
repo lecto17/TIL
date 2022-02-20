@@ -1,3 +1,79 @@
+* Event Deligation
+
+  <!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+    <div class="menu">
+        <button class="menu-btn" data-value="1">
+            <img class="icon" src="/src/assets/aImage.png" >
+            <span class="btn-label">button A</span>
+        </button>
+        <button class="menu-btn" data-value="2">
+            <img class="icon" src="/src/assets/bIage.png" >
+            <span class="btn-label">button B</span>
+        </button>
+        <button class="menu-btn" data-value="3">
+            <img class="icon" src="/src/assets/cImage.png" >
+            <span class="btn-label">button C</span>
+        </button>
+    </div>    
+</body>
+</html>
+
+
+이벤트를 걸어줄 때, 요소 하나 하나마다 addEventListener를 통해 걸게 되면, 성능이 안좋게 된다.
+
+따라서 event를 걸어줄 요소들의 부모에 event를 걸어주면, 성능을 향상 시킬 수 있다. 즉, event를 걸어줄 요소들의 부모로 event 처리를 위임하는 것이다.
+
+위에 코드에서는 각 button 들에 addEventListener를 등록하는 것이 아니라 menu라는 클래스를 갖는 부모 div element에 event를 등록하는 것이다.
+
+하지만 이러한 경우, 아래의 상황을 처리해야한다.
+부모에 이벤트를 걸어줬기 때문에, 그 부모 내에서 어떤 자식요소(어떤 버튼)를 클릭했는지를 구분할 수 있는 작업이 필요하다. 구분할 수 있는 방법으로는 event 객체의 target 속성을 확인하면 된다. 참고로 event 객체의 currentTarget 속성은 event가 걸려있는 요소를 출력하게 된다, eventHandler 안에서는 currentTarget과 this는 동일한 것을 나타내게 되어 있다. addEventListener를 호출하도록 한 객체를 출력한다. 곧, addEventListener가 걸려있는 객체를 출력한다.
+
+event.target을 통해 자식들을 구분할 수 있었지만, 자식 내에 가령 span 태그나 img 태그 같은 요소들이 있을 때, 그 요소를 클릭하면 어떤 자식인지를 구분해주는 것이 아니라, 자식 내에 span 태그 와 같은 내부에 있는 요소를 출력하게 된다.
+
+위 코드와 같은 경우, 어떤 버튼인지를 구분할 수 있어야 하는데, 어떤 버튼인지를 구별하는 것이 아닌 버튼 내에 자식 요소를 가르키게 된다.(출력하게 된다.) 
+
+ 
+
+그래서 위와 같은 문제를 해결하는 방법으로는 2가지 방법(css, script)이 있다.
+
+ 
+
+첫번째 css를 사용하는 경우, pointer-events: none 속성을 적용시킨다. 어떤 버튼인지를 구별하기 위해 버튼 내에 있는 자식 요소들에게 pointer-events: none을 적용시킨다. 위 코드의 경우 button 하위에 있는 span, img 태그에 해당 속성을 적용시키면 된다.
+
+둘째, script를 사용할 경우, 아래와 같은 코드를 추가하여 진행하면 된다.
+	<script>
+        const menu = document.querySelector(".menu");
+        function clickHandler(event) {
+            let elem = event.target;
+            while(!elem.classList.contains("menu-btn")) {
+                elem = elem.parentNode;
+
+                // menu-btn 바깥 영역이면서, menu 클래스 내부 영역을 클릭했을 경우
+                // undefined의 classList를 접근하는 에러를 막기 위해
+                if (elem.nodeName === 'BODY') {
+                    elem = null;
+                    return ;
+                }
+            }
+        }
+    </script>​
+ 
+
+cf) 위 코드에서 element에 custom tag로 data-value를 넣어줬다. 'data-'로 시작하는 커스텀 태그를 넣어줬을 경우, 해당 element의 dataset 속성에 value라는 값이 저장된다. 따라서 e.target.dataset.value로 접근하면 각 버튼의 data-value 값을 접근할 수 있다.
+
+ 
+
+이렇게 css와 script로 문제를 처리할 수 있을 경우, 보통 css로 깔끔하게 처리하면 되지만, css로 처리할 경우, pointer-events: none 속성을 적용한 하위 내 모든 자식영역에서는 clickEvent가 발생하지 않는 점을 유의해야 한다고 한다.
+
+ 
+
+script로 처리할 경우, 좋은 점으로는 동적으로 element가 생성되는 상황에 이벤트 리스너를 따로 추가적으로 구현하지 않아도 된다는 점이다. 
+
 * console.log와 console.dir
 
   [console.log]
