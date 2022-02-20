@@ -1,27 +1,30 @@
 * Event Deligation
 
+  ```
   <!DOCTYPE html>
-<html>
-<head>
-    
-</head>
-<body>
-    <div class="menu">
-        <button class="menu-btn" data-value="1">
-            <img class="icon" src="/src/assets/aImage.png" >
-            <span class="btn-label">button A</span>
-        </button>
-        <button class="menu-btn" data-value="2">
-            <img class="icon" src="/src/assets/bIage.png" >
-            <span class="btn-label">button B</span>
-        </button>
-        <button class="menu-btn" data-value="3">
-            <img class="icon" src="/src/assets/cImage.png" >
-            <span class="btn-label">button C</span>
-        </button>
-    </div>    
-</body>
-</html>
+	<html>
+	<head>
+
+	</head>
+	<body>
+	    <div class="menu">
+		<button class="menu-btn" data-value="1">
+		    <img class="icon" src="/src/assets/aImage.png" >
+		    <span class="btn-label">button A</span>
+		</button>
+		<button class="menu-btn" data-value="2">
+		    <img class="icon" src="/src/assets/bIage.png" >
+		    <span class="btn-label">button B</span>
+		</button>
+		<button class="menu-btn" data-value="3">
+		    <img class="icon" src="/src/assets/cImage.png" >
+		    <span class="btn-label">button C</span>
+		</button>
+	    </div>    
+	</body>
+	</html>
+
+   ```
 
 
 이벤트를 걸어줄 때, 요소 하나 하나마다 addEventListener를 통해 걸게 되면, 성능이 안좋게 된다.
@@ -46,6 +49,7 @@ event.target을 통해 자식들을 구분할 수 있었지만, 자식 내에 �
 첫번째 css를 사용하는 경우, pointer-events: none 속성을 적용시킨다. 어떤 버튼인지를 구별하기 위해 버튼 내에 있는 자식 요소들에게 pointer-events: none을 적용시킨다. 위 코드의 경우 button 하위에 있는 span, img 태그에 해당 속성을 적용시키면 된다.
 
 둘째, script를 사용할 경우, 아래와 같은 코드를 추가하여 진행하면 된다.
+
 	<script>
         const menu = document.querySelector(".menu");
         function clickHandler(event) {
@@ -61,7 +65,7 @@ event.target을 통해 자식들을 구분할 수 있었지만, 자식 내에 �
                 }
             }
         }
-    </script>​
+    </script>
  
 
 cf) 위 코드에서 element에 custom tag로 data-value를 넣어줬다. 'data-'로 시작하는 커스텀 태그를 넣어줬을 경우, 해당 element의 dataset 속성에 value라는 값이 저장된다. 따라서 e.target.dataset.value로 접근하면 각 버튼의 data-value 값을 접근할 수 있다.
