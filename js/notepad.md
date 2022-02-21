@@ -1,3 +1,23 @@
+* Event Bubbling
+
+  - html 특성 상, 자식 요소에서 발생한 event는 부모에서도 발생하게 된다
+
+    가령, 아래와 같은 코드 구조가 있고, td에서 발생하는 event가 있을 경우, tr에서도 event가 발생하고, table에서도 발생하게 되고, body에서도 발생하게 된다. 이 현상이 event bubbling 이라고 한다. 이 bubbling이 있어야 하는 이유는 td 태그 내에 span 태그가 있다고 가정하고 이때 td를 클릭한 경우 이벤트를 발생시키게 해놓았는데, span 태그를 클릭하여 td에 걸어놓은 event 발생이 안되는 문제를 위해 존재한다고 한다.
+
+  - event capturing: 부모에서 발생한 event가 자식에게 까지 내려오는 현상. 보통 event capturing은 팝업 닫기를 구현할 때 쓴다고 한다. 팝업의 바깥 쪽 영역을 클릭하여 팝업창이 닫히게끔 하는 용도로 사용된다. 팝업의 바깥쪽 영역은 팝업의 부모이고 이 부모에서 발생한 이벤트를 팝업창으로 전달하여 팝업창을 꺼지게끔 하면 된다고 한다.
+
+    ```
+      <body>
+         <table>
+	    <tr>
+	       <td></td>
+	    </tr>
+	 </table>
+      </body>
+    ```
+
+
+<br/>
 * Event Deligation
 
   <!DOCTYPE html>
