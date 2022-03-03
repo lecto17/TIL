@@ -2,6 +2,30 @@
 
   - return 값: 지정된 객체 자체의 열거 가능한 문자 속성 [key, value] 쌍의 배열
 
+  ```
+     const rspCoord = {
+	 바위: '0',
+	 가위: '-142px',
+	 보: '-284px',
+     }
+     
+     const RSP = () => {
+     	const [imgCoord, setImgCoord] = useState(rspCoord.바위);
+
+	const computerChoice = (imgCoord) => {
+	 return Object.entries(rspCoord).find((v) => {
+	    return v[1] === imgCoord
+	 })[0];
+     	}
+
+     	...
+
+     	computerChoice(imgCoord);
+
+     }
+
+  ```
+
 
 * Event Bubbling
 
