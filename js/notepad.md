@@ -1,3 +1,8 @@
+* Object.Entries()
+
+  - return 값: 지정된 객체 자체의 열거 가능한 문자 속성 [key, value] 쌍의 배열
+
+
 * Event Bubbling
 
   - html 특성 상, 자식 요소에서 발생한 event는 부모에서도 발생하게 된다
