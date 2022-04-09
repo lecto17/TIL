@@ -1,3 +1,13 @@
+* encodeURI()
+
+  - 인터넷 주소에서 사용하는 :(semi-colon), ;(colon), /(slash), =, ?, & 등을 제외하고 인코딩하는 함수이다.
+
+  - encodeURIComponent() : 모든 문자를 인코딩하는 함수이다.
+
+  ex)'hello?yo u'라는 글자를 encodeURI(), encodeURIComponent() 했을 때의 차이가 있다. 첫번째는 hello?yo%20u 두번째는 hello%3Fyo%20u와 같은 결과가 출력된다.
+
+<br />
+
 * Object.Entries()
 
   - return 값: 지정된 객체 자체의 열거 가능한 문자 속성 [key, value] 쌍의 배열
