@@ -1,3 +1,47 @@
+* 고차함수
+
+   ```
+    const onClick = () => () => {
+       ...
+    }
+
+    위 코드는 아래의 코드와 동일하다 
+
+    const onClick = () => ()=> {
+       return () => {
+          ...
+       };
+    }
+   ``` 
+
+  - 고차함수를 사용할때 event를 어디다가 넣어야 할 지(1번 혹은 2번??) 고민일때 함수의 return 값으로 대치해서 생각하면 편하다.
+   
+   ```
+    const onClick = (1) => (2) => {
+       console.log(e.target);
+    }
+
+    document.querySelector("#header").addEventListener('click', onClick())
+
+   ```
+
+  -> onClick의 return 값으로 대체해볼것, 만약 1번 자리에 event 객체가 있었다면, 아래 코드와 같아진다.
+
+    ```
+     document.querySelector("#header").addEventListener('click', () => {
+        console.log(e.target);
+     })
+
+     event 객체가 없는데, event 객체에 접근하는 오류가 생긴다. 만약 2번 자리에 event 객체가 있었다면, 아래 코드와 같아지고 이게 맞는 코드이다.
+
+     document.querySelector("#header").addEventListener('click', (e) => {
+        console.log(e.target);
+     })
+
+    ```
+
+<br />
+
 * encodeURI()
 
   - 인터넷 주소에서 사용하는 :(semi-colon), ;(colon), /(slash), =, ?, & 등을 제외하고 인코딩하는 함수이다.
