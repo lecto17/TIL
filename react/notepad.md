@@ -43,3 +43,50 @@
 <br />
 * 부수효과 함수란?
 
+  - 부수효과란 외부의 상태를 변경하는 것을 의미(서버 API를 호출하거나, 이밴트 핸드러를 등록하는 것)
+
+  - 부수효과가 많은 프로젝트는, <b>순수 함수가 가지는 여러 장점을 포기하게 되는 등, 유닛테스트가 힘들어진다.</b>
+
+  ```
+    useEffect(() => {}, [variables]);
+
+    첫번째 매개변수 이 함수는 컴포넌트가 랜더링된 "후"에 호출된다. 더 정확하게, 렌더링 결과가 실제 돔에 반영되고 비동기로 호출된다. 이 함수를 부수 효과 함수라고 한다.
+  ```
+
+  - 부수효과 함수의 반환값은 항상 <b>"함수 타입"</b>이여야 한다. 따라서 useEffect의 첫번째 인자로 async함수를 사용할 수 없다. async 함수는 Promise 객체를 반환하기 때문에 부수함수 효과가 될 수 없다. 대신에 첫번째 인자 함수 내에서 async 함수를 호출하는 것은 가능하다.
+
+  ```
+    //(1)
+    useEffect(() => {
+      async function fetchUserInfo() {
+	 const data = await fetchUserData(userId);
+	 setUser(data);
+      }
+    }, [userId]);
+
+    
+    //(2)
+    async function fetchUserInfo() {
+	 const data = await fetchUserData(userId);
+	 setUser(data);
+    }
+
+    useEffect(() => { fetchUserInfo() }, [fetchUserInfo]);
+
+    
+    //(3)
+    const fetchAndSetUser = useCallback(
+	async function fetchUserInfo() {
+	  const data = await fetchUserData(userId);
+	  setUser(data);
+	},
+	[userId]
+    );
+
+    useEffect(() => { fetchAndSetUser() }, [fetchAndSetUser]);
+
+  ```
+
+  - 2번과 같이 외부 함수를 useEffect 내부에서 호출하는 경우, useEffect의 두번째 인자인 의존성 배열에 함수명을 넣어줘어야 한다. 
+
+  - 그런데 2번 같은 경우 컴포넌트가 재렌더링 될 때마다, fetchUserInfo라는 함수가 계속해서 반복생성 되는 문제가 있어 3번 처럼 호출하는 함수에 useCallback을 감싸줘야 한다.
