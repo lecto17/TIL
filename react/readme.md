@@ -1,3 +1,15 @@
+* useReducer
+
+  - useState의 대체함수
+
+  - (state, action) => newState의 형태로 reducer를 받고 dispatch 메서드와 짝의 형태로 현재 state를 반환.
+
+  - 다수의 하윗값을 포함하는 복잡한 정적 로직을 만드는 경우, 다음 state가 이전 state에 의존적인 경우, 보통 useState보다 useReducer를 선호한다.
+
+  - useReducer는 자세한 업데이트를 트리거하는 컴포넌트의 성능을 최적화할 수 있게 하는데, 이것은 콜백 대신 dispatch를 전달할 수 있기 때문이다.
+
+<br />
+
 * npm outdated: 프로젝트에 설치되어 있는 라이브러리의 현재 버젼과 최신 버젼을 보여준다. 주기적으로 해당 명령어를 실행하여 버전 업데이트를 할 수 있도록 하는 것이 좋다.
 
 <br />
