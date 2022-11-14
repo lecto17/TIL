@@ -2,9 +2,14 @@
 <br/>
 
 <blockquote>
-  * <b>질문</b>이 <b>정답</b>보다 중요하다.
-
-  * <b>관점</b>이 <b>기술</b>보다 중요하다.
+  <div>
+   <span>
+    <b>질문</b>이 <b>정답</b>보다 중요하다. <br/>
+   </span>
+   <span>
+    <b>관점</b>이 <b>기술</b>보다 중요하다.   
+   </span>
+ </div>
 </blockquote>
 
   * Coponent 설계 시 Principle
