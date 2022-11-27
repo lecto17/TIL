@@ -1,3 +1,19 @@
+* webpack5 module federation
+
+  - module federation은 여러 분리된 빌드들이 하나의 앱을 구성할 수 있는 Webpack5의 새로운 기능이다.
+
+  - 하나의 앱이 <b>다른 빌드에 있는 코드를 동적으로 실행</b>시킬 수 있는 기술이다.
+
+  - micro-frontends의 근간이 되는 기술이기도 하다.
+
+  - 특정 빌드가 remote 앱이 되고 그 앱에서 다른 빌드들을 동적으로 불러와 사용할 수 있다. remote는 꼭 특정한 하나의 빌드만 될 수 있는 것이 나이고, federated된 모든 빌드들이 remote가 될 수 있다. 즉 <b>양방향(bidirectional)</b>으로 module federation이 가능하다. 가령 a 빌드에서 b 빌드에 있는 코드를 실행시킬 수 있고, b빌드에서도 a빌드에 있는 코드를 실행시킬 수 있다.
+
+  cf) federated 란?
+    
+    - https://medium.com/curg/%EC%97%B0%ED%95%A9-%ED%95%99%EC%8A%B5-federated-learning-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%B1%8C%EB%A6%B0%EC%A7%80-b5c481bd94b7
+
+<br/>
+
 * CLS(Cumulative Layout Shift)란?
 
   - CLS(누적 레이아웃 이동)는 페이지의 전체 수명 동안 발생하는 모든 예기치 않은 레이아웃 이동에 대해 가장 큰 레이아웃 이동 점수 버스트를 뜻한다. // 사용자에게 발생하는 레이아웃 이동(layout shift) 빈도를 측정
