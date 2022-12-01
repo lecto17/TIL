@@ -5,6 +5,80 @@
   cf) https://wonism.github.io/domain-sharding/
 
 <br/>
+
+* GNB, LNB란?
+
+  - GNB, LNB, FNB 는 매장에서 고객들이 자주 찾는 물건을 눈에 잘 띄는 위치에 배치해 빠른 구매를 이끌어내듯이, 웹 사이트에서 고객이 찾는 카테고리를 빠르게, 어디서나 확인할 수 있도록 하는 구성을 뜻한다.
+
+  - GNB(Global Navigation Bar)
+
+    - 웹 사이트 전체에 동일하게 적용되는 네비게이션 바
+
+    - 보통 웹사이트 최상단에 위치하며 어떤 페이지를 클릭해도 동일하게 보여진다.
+
+    - 웹사이트가 제공하는 모든 서비스를 표현하며, 직관적으로 구성하는 것이 좋다.
+
+  - LNB(Local Navigation Bar)
+
+    - GNB를 클릭하거나 호버 했을 때 나오는 하위 카테고리 리스트
+
+  - FNB(Foot Navigation Bar)
+
+    - GNB와 동일하게 모든 웹페이지 가장 하단에 위치한 내비게이션 바
+
+<br/>
+
+  cf) SNB(Side Navigation Bar): 왼쪽 혹은 오른쪽에 위치하며, 메인 메뉴, 서브메뉴를 제외한 기타 메뉴로 구성하여 사이드 메뉴라고 할 수 있다.
+
+<br/>
+
+* webpack5 module federation
+
+  - module federation은 여러 분리된 빌드들이 하나의 앱을 구성할 수 있는 Webpack5의 새로운 기능이다.
+
+  - 하나의 앱이 <b>다른 빌드에 있는 코드를 동적으로 실행</b>시킬 수 있는 기술이다.
+
+  - micro-frontends의 근간이 되는 기술이기도 하다.
+
+  - 특정 빌드가 remote 앱이 되고 그 앱에서 다른 빌드들을 동적으로 불러와 사용할 수 있다. remote는 꼭 특정한 하나의 빌드만 될 수 있는 것이 나이고, federated된 모든 빌드들이 remote가 될 수 있다. 즉 <b>양방향(bidirectional)</b>으로 module federation이 가능하다. 가령 a 빌드에서 b 빌드에 있는 코드를 실행시킬 수 있고, b빌드에서도 a빌드에 있는 코드를 실행시킬 수 있다.
+
+  cf) federated 란?
+    
+    - https://medium.com/curg/%EC%97%B0%ED%95%A9-%ED%95%99%EC%8A%B5-federated-learning-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%B1%8C%EB%A6%B0%EC%A7%80-b5c481bd94b7
+    
+    - https://module-federation.github.io/blog/get-started
+
+<br/>
+
+* CLS(Cumulative Layout Shift)란?
+
+  - CLS(누적 레이아웃 이동)는 페이지의 전체 수명 동안 발생하는 모든 예기치 않은 레이아웃 이동에 대해 가장 큰 레이아웃 이동 점수 버스트를 뜻한다. // 사용자에게 발생하는 레이아웃 이동(layout shift) 빈도를 측정
+
+  - 방문자에게 콘텐츠가 얼마나 불안정한 지 측정하는 사용자 경험 측정 항목 및 웹 페이지의 성능 측정 지표이다.
+
+  - 레이아웃 이동은 시각적 요소가 렌더링된 프레임에서 다음 프레임으로 위치를 변경할 때마다 발생한다.
+
+  - 뷰포트에서 이동한 콘텐츠의 양과 영향을 받은 요소가 이동한 거리를 확인하여 점수로 표시한다.(CLS 점수, 좋은 사용자 환경을 제공하려면 사이트의 CLS 점수가 0.1 미만이여야 한다.)
+
+  - 레이아웃 이동이 발생하는 원인
+
+    * 치수가 없는 이미지
+
+    * 크기가 없는 광고, 삽입 및 iframe
+
+    * 동적으로 삽입된 컨텐츠
+
+    * FOIT / FOUT을 유발하는 웹 글꼴
+
+    * DOM을 업데이트하기 전에 네트워크 응답을 기다리는 작업
+
+  cf)
+
+  * https://wit.nts-corp.com/2020/12/28/6240
+
+  * https://web.dev/i18n/ko/cls/
+
+<br/>
 * 메시지 브로커, 이벤트 브로커의 차이
 
   [ 메세지 브로커 ]

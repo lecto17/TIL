@@ -1,3 +1,50 @@
+* Recoil, react-query
+
+<img width="977" alt="image" src="https://user-images.githubusercontent.com/53415000/201479296-102cb698-f8c1-4f16-864f-8baecd265121.png">
+
+
+* Prop Drilling(프로퍼티 내리꽂기)이란?
+
+  - Prop Drilling은 props를 오로지 하위 컴포넌트로 전달하는 용도로만 쓰이는 컴포넌트들을 거치면서 React Component 트리의 한 부분에서 다른 부분으로 데이터를 전달하는 과정을 뜻한다.
+
+  - prop drilling은 문제가 되지 않는다, 그러나 prop 전달을 10개, 15개 같이 많은 컴포넌트를 거쳐 전달하게 된다면, 코드를 읽을 때 해당 prop을 추적하기가 힘들어져 유지 보수에 매우 어려워 진다.
+
+  - 이러한 Prop Drilling을 피하기 위해서 아래와 같은 방법들이 있다.
+
+    * 전역 상태관리 라이브러리 사용
+     
+      - redux, mobx, recoil 등
+
+    * 하위 컴포넌트를 출력하는 children 기능 사용
+
+      - 컴포넌트 자식으로 어떤 엘리먼트가 들어올 지 예상할 수 없는 경우, 범용적인 '박스'역할을 하는 sidebar 혹인 Dialog, layout과 같은 컴포넌트에서 자주 볼 수 있다.
+
+      - children 사용 시, 컴포넌트 하위의 자식을 모두 자식 취급하지는 않는다고 한다. 코드를 통해 살펴보자. 아래의 코드에서 Category 컴포넌트의 자식의 개수를 확인해보면 1개만 출력된다고 한다.
+
+      ```
+        <Category>
+	  <ul>
+	    {
+	       menuList.map((menu, idx) => {
+	         return (
+		    <li
+		      key={menu.id}
+		    >
+			{ menu }
+		    </li>
+		 )
+	       })
+	    }	
+	  </ul>
+	</Category>
+      ```
+
+   cf) 
+
+     1. https://javascript.plainenglish.io/how-to-avoid-prop-drilling-in-react-using-component-composition-c42adfcdde1b
+
+     2. https://edykim.com/ko/post/prop-drilling/
+
 * useReducer
 
   - useState의 대체함수
