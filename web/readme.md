@@ -1,3 +1,10 @@
+* 도메인 샤딩
+
+  - 추후 아래의 글을 보며 정리할 예정입니다.
+
+  cf) https://wonism.github.io/domain-sharding/
+
+<br/>
 * 메시지 브로커, 이벤트 브로커의 차이
 
   [ 메세지 브로커 ]
