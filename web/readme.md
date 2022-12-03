@@ -1,8 +1,14 @@
-* 도메인 샤딩
+* 도메인 샤딩(domain sharding)
+  
+  - 정적 파일(이미지, css, js 등)의 로딩 속도를 개선하는 방법으로 여러 개의 서브 도메인을 생성해 정적파일을 병렬로 가져온다고 한다.
 
-  - 추후 아래의 글을 보며 정리할 예정입니다.
+  - 이러한 도메인 샤딩의 등장 배경은 HTTP/1.x 버젼에서 도메인 하나 당 동시에 요청할 수 있는 개수 제한이 있었기 때문이라고 한다.
 
-  cf) https://wonism.github.io/domain-sharding/
+  cf) 
+    https://wonism.github.io/domain-sharding/
+
+    https://aroundck.tistory.com/5153
+
 
 <br/>
 
