@@ -1,10 +1,29 @@
 * 도메인 샤딩(domain sharding)
+
+  - sharding: 조각, 파편을 뜻한다.
+
+  - resource를 여러 개의 domain으로 나누어 저장하여, page load time을 향상시키는 일종의 트릭 혹은 방법이다.
+
+  - 여러 개의 domain으로 나누어진 리소스를 다운받기 때문에 browser는 더 많은 리소스를 한번에 더 많이 받을 수 있다.
+
+  - Domain sharding을 적용하는 이유는 대부분의 web browser가 한 개의 domain에 대해 active connection을 제한하기 때문이다.
   
   - 정적 파일(이미지, css, js 등)의 로딩 속도를 개선하는 방법으로 여러 개의 서브 도메인을 생성해 정적파일을 병렬로 가져온다고 한다.
 
   - 이러한 도메인 샤딩의 등장 배경은 HTTP/1.x 버젼에서 도메인 하나 당 동시에 요청할 수 있는 개수 제한이 있었기 때문이라고 한다.
 
-  cf) 
+  - 최신 브라우저들은 보통 한 도메인에 약 6개의 동시 다운로드를 제공한다. 이 갯수를 초과하는 페이지의 경우, 갯수를 6으로 나눈 도메인에 리소스를 뿌려두면, parallel하게 리소스들을 다운받을 수 있다.
+
+  - Domain sharding이 항상 좋은 것은 아니다. performance loss를 유발하기도 한다.
+
+  - web browser는 DNS loopup을 추가 domain에 대해서 수행해야하고, 각 domain에 대해서 connection을 유지해야 한다. 그래서 최초 initial load time은 기렁질 수 있다.
+
+  - 2~4 개의 domain이 최적의 비율이라고 한다. 따라서 무조건 많은 domain이 좋은 것은 아니다.
+
+  - SPDY는 제한없는 동시 요청이 가능하기 때문에, domain sharding을 해결할 수 있다. SPDY를 정식 지원하기 전까지는 domain sharding이 효율적일 수 있으나, SPDY를 도입하면서부터는 overhead 문제로 오히려 domain sharding을 제거하는 것이 추천된다.
+
+  cf)
+
     https://wonism.github.io/domain-sharding/
 
     https://aroundck.tistory.com/5153
