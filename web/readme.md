@@ -1,3 +1,7 @@
+* 애드온(add-on)
+
+  cf) https://documenies.com/10
+
 * 도메인 샤딩(domain sharding)
 
   - sharding: 조각, 파편을 뜻한다.
