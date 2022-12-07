@@ -1,5 +1,10 @@
 * 추후 정리할 내용입니다.
 
+  [nextjs]
+
+    - https://velog.io/@taeung/Next.js-getStaticProps-%EC%82%AC%EC%9A%A9%EA%B8%B0
+
+
   [eslint]
 
     - https://tech.kakao.com/2019/12/05/make-better-use-of-eslint/
