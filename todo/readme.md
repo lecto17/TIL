@@ -4,6 +4,8 @@
 
     - https://velog.io/@taeung/Next.js-getStaticProps-%EC%82%AC%EC%9A%A9%EA%B8%B0
 
+    - https://merrily-code.tistory.com/154
+
 
   [eslint]
 
