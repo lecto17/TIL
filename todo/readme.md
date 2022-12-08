@@ -1,5 +1,16 @@
 * 추후 정리할 내용입니다.
 
+  [cypress]
+
+    - https://www.cypress.io/
+
+    - https://velog.io/@0307kwon/cypress%EB%9E%80
+
+  [2023 tech trend]
+
+    - https://www.youtube.com/watch?v=1v_TEnpqHXE
+
+
   [react-docker]
 
     - https://velog.io/@shinyejin0212/React-2.-Docker%EB%A1%9C-React-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0
