@@ -1,5 +1,11 @@
 * 추후 정리할 내용입니다.
 
+  [try-catch]
+
+    // 비동기 함수 작성 시 try-catch로 감싸주기 VS await에서 제공하는 .catch로 에러 처리하기
+
+    - https://velog.io/@vraimentres/async-%ED%95%A8%EC%88%98%EC%99%80-try-catch
+
   [nextjs]
 
     - https://velog.io/@taeung/Next.js-getStaticProps-%EC%82%AC%EC%9A%A9%EA%B8%B0
