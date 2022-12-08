@@ -1,5 +1,10 @@
 * 추후 정리할 내용입니다.
 
+  [react-docker]
+
+    - https://velog.io/@shinyejin0212/React-2.-Docker%EB%A1%9C-React-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0
+
+
   [try-catch]
 
     // 비동기 함수 작성 시 try-catch로 감싸주기 VS await에서 제공하는 .catch로 에러 처리하기
