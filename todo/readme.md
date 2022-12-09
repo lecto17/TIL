@@ -1,5 +1,22 @@
 * 추후 정리할 내용입니다.
 
+  [encode, encodeURI]
+
+    - https://androman.tistory.com/27
+
+
+  [flex 속성]
+
+    - 프엔 개발자로서 어떤 퍼블리싱이건 간에 마스터하고 싶은 마음에
+
+    - https://flexboxfroggy.com/#ko
+
+    - https://d2.naver.com/helloworld/8540176
+
+    - https://velog.io/@mooongs/flex1%EC%9D%98-%EC%9D%98%EB%AF%B8 
+
+     // udemy 강의가 좋긴 한 것 같다.
+
   [cypress]
 
     - https://www.cypress.io/
