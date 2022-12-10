@@ -1,3 +1,27 @@
+* encodeURI, encodeURIComponent 차이
+
+  - encodeURI는 알파벳, 0~9의 숫자,  ; , / ? : @ & = + $ #    - _ . ! ~ * ' ( )를 제외한 문자를 인코딩(이스케이프 처리)
+
+  - encodeURIComponent는 알파벳,0~9의 숫자 - _ . ! ~ * ' ( ) 를 제외한 문자를 이스케이프 처리
+
+  -> 두 함수의 차이는 <b>/ ? : @ & = + $ # 도 이스케이프 처리를 해버리는 지 여부</b>에 있다.
+
+  - & ? 와 같이 uri에서 특수한 기능을 하는 문자는(eg, ?는 uri에서 query string을 의미함) 인코딩하면 안되므로 path 전체를 인코딩할 때는 encodeURI를 사용.
+
+  파라미터 값에 & 등의 특수문자가 값으로 들어갈 때는 인코딩해줘야 하기에, 파라미터 값에는 encodeURIComponent 사용
+
+  ```
+    const name = "co&ding"; // uri 파라미터 name으로 들어갈 값
+    const uri = "http://javascript.com?name=" + encodeURIComponent(name) // 파라미터 값만 인코딩
+  ```
+
+  cf)
+
+    - 인코딩: 어떤 네트워크에서도 사용할 수 있게 문자를 코드(ASCII, 유니코드 등)로 변환하는 것
+
+    - 이스케이프: 문자열을 인코딩하는 것
+
+
 * 도메인 샤딩(domain sharding)
 
   - sharding: 조각, 파편을 뜻한다.
