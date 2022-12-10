@@ -21,6 +21,9 @@
 
     - 이스케이프: 문자열을 인코딩하는 것
 
+* 애드온(add-on)
+
+  cf) https://documenies.com/10
 
 * 도메인 샤딩(domain sharding)
 
