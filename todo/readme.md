@@ -1,9 +1,5 @@
 * 추후 정리할 내용입니다.
 
-  [encode, encodeURI]
-
-    - https://androman.tistory.com/27
-
 
   [flex 속성]
 
