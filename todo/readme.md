@@ -1,5 +1,18 @@
 * 추후 정리할 내용입니다.
 
+  [nexjs]
+    
+    - https://velog.io/@kjs2504/Next.js-%EB%B8%94%EB%A1%9C%EA%B7%B8
+
+    - https://darrengwon.tistory.com/833
+
+  [resume]
+
+    - https://wonny-log.notion.site/Wonny-c2f8051bfb574f349406a30d2bc71a45
+
+  [js의 contextMenu란]
+
+    - https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event
 
   [flex 속성]
 
