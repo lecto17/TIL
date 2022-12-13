@@ -1,5 +1,11 @@
 * 추후 정리할 내용입니다.
 
+  [craco]
+
+    - https://abangpa1ace.tistory.com/220#:~:text=%F0%9F%92%99%20Craco%20%EB%9E%80%3F,%EB%8D%AE%EC%96%B4%EC%93%B0%EA%B8%B0%20%EC%9C%84%ED%95%9C%20%ED%8C%A8%ED%82%A4%EC%A7%80%EC%9D%B4%EB%8B%A4
+    
+    - https://bgradecoding.tistory.com/14
+
   [nexjs]
     
     - https://velog.io/@kjs2504/Next.js-%EB%B8%94%EB%A1%9C%EA%B7%B8
