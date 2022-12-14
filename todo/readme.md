@@ -1,5 +1,22 @@
 * 추후 정리할 내용입니다.
 
+  [github 잔디]
+
+    - https://pearlluck.tistory.com/365
+
+    - https://coding-groot.tistory.com/109
+
+
+  [vscode 기능]
+
+    - https://www.youtube.com/watch?v=mh-0twurNRE
+
+    - https://ux.stories.pe.kr/150
+
+  [rollup VS webpack]
+    
+    - https://yoon-dumbo.tistory.com/entry/%EB%A1%A4%EC%97%85%EA%B3%BC-%EC%9B%B9%ED%8C%A9%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90-rollup-vs-webpack
+
   [craco]
 
     - https://abangpa1ace.tistory.com/220#:~:text=%F0%9F%92%99%20Craco%20%EB%9E%80%3F,%EB%8D%AE%EC%96%B4%EC%93%B0%EA%B8%B0%20%EC%9C%84%ED%95%9C%20%ED%8C%A8%ED%82%A4%EC%A7%80%EC%9D%B4%EB%8B%A4
