@@ -1,5 +1,11 @@
 * 추후 정리할 내용입니다.
 
+  [알고리즘]
+
+    - https://school.programmers.co.kr/learn/courses/30/parts/12263
+
+    - https://school.programmers.co.kr/learn/challenges?tab=algorithm_practice_kit
+
   [github 잔디]
 
     - https://pearlluck.tistory.com/365
