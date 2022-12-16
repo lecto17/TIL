@@ -1,5 +1,16 @@
 * 추후 정리할 내용입니다.
 
+  [svg handle]
+
+    - https://velog.io/@juno7803/React-React%EC%97%90%EC%84%9C-SVG-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0
+
+  [page]
+
+    * 404 Page
+
+      - https://velog.io/@juno7803/!https://blog.logrocket.com/how-to-use-svgs-in-react/
+
+    
   [알고리즘]
 
     - https://school.programmers.co.kr/learn/courses/30/parts/12263
@@ -85,6 +96,12 @@
 
 
   [eslint]
+
+    - https://talkwithcode.tistory.com/93
+
+    - https://heewon26.tistory.com/262
+
+    - https://helloinyong.tistory.com/325
 
     - https://tech.kakao.com/2019/12/05/make-better-use-of-eslint/
 
