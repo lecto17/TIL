@@ -23,6 +23,8 @@
 
     - https://coding-groot.tistory.com/109
 
+    - https://jamesu.dev/posts/2021/02/09/showing-github-contributions-graph/
+
 
   [vscode 기능]
 
