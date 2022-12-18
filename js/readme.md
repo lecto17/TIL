@@ -1,3 +1,29 @@
+* generator (제네레이터)
+
+  - 함수의 흐름을 중간 제어할 수 있다. 함수의 흐름을 멈추게 할 수 있다.
+
+  ```
+    const gen = function* () {}
+
+    gen() // gen {<suspended>}
+
+    gen().next() // {value: undefined, done: true}
+
+    cons gen1 = function* () {
+      console.log(1);
+      yield;
+      console.log(2);
+      yield 4;
+    }
+
+    const generator = gen1();
+
+    generator.next(); // 1 {value: undefined; done: false;}출력하고 멈춤.
+    generator.next(); // 2 {value: 4; done: false;} 출력하고 멈춤.
+    generator.next(); // {value: undefined; done: true;} 출력하고 멈춤.
+
+  ```
+
 * 메시징 시스템
 
   - 분산형 아키텍처에서의 메시징 시스템이란 용어는 네트워크를 통한 정보 교환을 용이하게 하기 위한 솔루션, 패턴 및 일련의 아키텍처를 의미.
