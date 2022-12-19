@@ -1,5 +1,13 @@
 * 추후 정리할 내용입니다.
 
+  [mouse 이벤트]
+
+    - https://yoonsidae.tistory.com/13
+
+    - https://velog.io/@rimo09/%EB%A7%88%EC%9A%B0%EC%8A%A4-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%A0%95%EB%B3%B5
+
+    - https://songjihyeon.tistory.com/22
+
   [svg handle]
 
     - https://velog.io/@juno7803/React-React%EC%97%90%EC%84%9C-SVG-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0
