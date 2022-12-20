@@ -1,5 +1,30 @@
 * 추후 정리할 내용입니다.
 
+  [지디웹]
+
+    - https://www.gdweb.co.kr/main/
+
+
+  [log 관리 ELKR]
+
+    - 
+https://medium.com/chequer/elkr-elasticsearch-logstash-kibana-redis-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%A1%9C%EA%B7%B8%EB%B6%84%EC%84%9D-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0-f3dd9dfae622
+
+    - https://blog.advenoh.pe.kr/go/Go%EC%97%90%EC%84%9C%EC%9D%98-%EB%A1%9C%EA%B7%B8%EA%B9%85-Logging-in-Go/
+
+    - https://jonnung.dev/system/2018/04/06/fluentd-log-collector-part1/#gsc.tab=0
+
+    - https://coding-factory.tistory.com/801
+
+
+  [PoC란?]
+
+    - https://engineer-mole.tistory.com/35
+
+  [semantic UI]
+
+    - https://geonlee.tistory.com/96
+
   [mouse 이벤트]
 
     - https://yoonsidae.tistory.com/13
