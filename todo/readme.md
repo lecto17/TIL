@@ -1,10 +1,5 @@
 * 추후 정리할 내용입니다.
 
-  [지디웹]
-
-    - https://www.gdweb.co.kr/main/
-
-
   [log 관리 ELKR]
 
     - 
