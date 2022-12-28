@@ -1,3 +1,10 @@
+* 지디웹
+
+  - 참가방법: https://www.gdweb.co.kr/sub/process.asp
+
+  - 위 사이트에서 소개하는 내용을 중점적으로 사이트를 만들어야 할 것 같다.
+
+
 * encodeURI, encodeURIComponent 차이
 
   - encodeURI는 알파벳, 0~9의 숫자,  ; , / ? : @ & = + $ #    - _ . ! ~ * ' ( )를 제외한 문자를 인코딩(이스케이프 처리)
