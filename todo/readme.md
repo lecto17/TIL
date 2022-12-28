@@ -1,5 +1,9 @@
 * 추후 정리할 내용입니다.
 
+  [addEventListener('scroll') VS onScroll Event]
+
+    - https://stackoverflow.com/questions/60745475/what-is-the-difference-between-window-onscroll-and-window-addeventlistener
+
   [지디웹]
 
     - https://www.gdweb.co.kr/main/
