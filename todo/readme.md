@@ -1,5 +1,9 @@
 * 추후 정리할 내용입니다.
 
+  [rtk 실전]
+
+    - https://www.youtube.com/watch?v=pnpO3o8mLBU
+
   [addEventListener('scroll') VS onScroll Event]
 
     - https://stackoverflow.com/questions/60745475/what-is-the-difference-between-window-onscroll-and-window-addeventlistener
