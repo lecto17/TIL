@@ -1,5 +1,13 @@
 * 추후 정리할 내용입니다.
 
+  [개발 글쓰기]
+
+    - https://www.youtube.com/watch?v=xu3XGEomRWI
+
+  [react query]
+
+    - https://www.youtube.com/watch?v=MArE6Hy371c
+
   [swr]
    
     - https://www.youtube.com/watch?v=b7Uqx7NZpHw
