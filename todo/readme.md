@@ -1,5 +1,9 @@
 * 추후 정리할 내용입니다.
 
+  [swr]
+   
+    - https://www.youtube.com/watch?v=b7Uqx7NZpHw
+
   [rtk 실전]
 
     - https://www.youtube.com/watch?v=pnpO3o8mLBU
