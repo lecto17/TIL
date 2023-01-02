@@ -22,6 +22,22 @@
 
     - react 내에서도 vue의 watch 같은 유사한 기능을 구현해주는 것 - https://react-hook-form.com/api/useform/watch/
 
+  [개발 글쓰기]
+
+    - https://www.youtube.com/watch?v=xu3XGEomRWI
+
+  [react query]
+
+    - https://www.youtube.com/watch?v=MArE6Hy371c
+
+  [swr]
+   
+    - https://www.youtube.com/watch?v=b7Uqx7NZpHw
+
+  [rtk 실전]
+
+    - https://www.youtube.com/watch?v=pnpO3o8mLBU19a770002fe6afb80e7383db008c26a55f811896
+
 
   [addEventListener('scroll') VS onScroll Event]
 
