@@ -1,5 +1,28 @@
 * 추후 정리할 내용입니다.
 
+  [some article]
+
+    - https://teivah.medium.com/maps-and-memory-leaks-in-go-a85ebe6e7e69
+
+    - https://velog.io/@jch9537/React-manifest.json
+
+    - https://dev-event.vercel.app/events
+
+    - https://portfolio.blogzip.net/    
+
+    - https://devowen.com/453
+
+    - https://schatz37.tistory.com/2
+
+    - https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome
+
+    - https://intro.f-lab.kr/?utm_source=gdn&utm_medium=da_smart&utm_campaign=co_mentee&utm_content=Responsive&gclid=EAIaIQobChMIhZfr5-Kg_AIVM-L9BR36sgsGEAEYASAAEgJxp_D_BwE
+
+    - https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=happylight&logNo=221412576943
+
+    - react 내에서도 vue의 watch 같은 유사한 기능을 구현해주는 것 - https://react-hook-form.com/api/useform/watch/
+
+
   [addEventListener('scroll') VS onScroll Event]
 
     - https://stackoverflow.com/questions/60745475/what-is-the-difference-between-window-onscroll-and-window-addeventlistener
