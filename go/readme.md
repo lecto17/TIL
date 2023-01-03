@@ -39,9 +39,9 @@
 	runtime.GC() // Triggers a manual GC
 	printAlloc() // 3) output: 293mb
 	runtime.KeepAlive(m) // Keeps a reference to m so that the map isn’t collected
-}
+	}
 
-	func printAlloc() {
+	func printAlloc() {}
     ```
 
     - 위 코드에서 백만 개의 원소를 map에 넣었을 때, 461mb의 크기가 되었다가 이후, 모든 원소를 삭제하였을 때 map의 크기는 293mb가 된다. map 내에 백만 개의 요소가 있을 때보다 크기가 줄어들기는 했지만, 빈 map의 크기가 여전히 293mb로 남아있는 것을 볼 수 있다.
