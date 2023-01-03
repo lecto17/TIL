@@ -54,7 +54,7 @@
 
       - 그림 참조
 
-    - key-value를 담는 bucket들은 모두 고정된 크기이며, 8개의 원소를 저장할 수 있는 배열로 되어있다. 만약 bucket 사이즈를 넘어가는 원소를 저장해야할 경우(bucket overflow), go는 또 다른 8개의 원소를 담을 수 있는 bucket을 만들고 이전 것과의 link를 한다.
+    - key-value를 담는 bucket들은 모두 고정된 크기이며, 8개의 원소를 저장할 수 있는 배열로 되어있다. 만약 bucket 에 8개를 넘어가는 원소를 저장해야할 경우(bucket overflow), go는 또 다른 8개의 원소를 담을 수 있는 bucket을 만들고 이것을 이전 것과의 link를 한다.
       
       - 그림 참조
 
