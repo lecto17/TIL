@@ -62,12 +62,14 @@
 
     - go의 map은 <underline>runtime.hmap</underline> 구조체를 가리키는 pointer이다. 이 구조체는 대략 아래와 같이 생겼다. 
 
+
       ```
         type hmap struct {
            B uint8 // log_2 of # of buckets
 	           // (can hold up to loadFactor * 2^B items)
 	   // ...
 	}
+	
       ```
 
     - 구조체는 B 필드를 포함하여 다양한 필드를 가지고 있다. B 필드는 map 내 buckets의 갯수를 지정한다.
@@ -92,7 +94,7 @@
 
       - 그림 참조
 
-    - 위 그림처럼, ```map[int]*[128]byte``` 타입은 모든 원소들을 제거한 후에 요구되는 메모리 크기는 상당히 적다. 또한 이 경우, peak time 동안에 필요로 되는 메모리의 크기도 상당히 작아 소비되고 있는 메모리를 줄이는데 최적화를 할 수 있다.
+    - 위 그림처럼, `map[int]*[128]byte` 타입은 모든 원소들을 제거한 후에 요구되는 메모리 크기는 상당히 적다. 또한 이 경우, peak time 동안에 필요로 되는 메모리의 크기도 상당히 작아 소비되고 있는 메모리를 줄이는데 최적화를 할 수 있다.
 
     - NOTE: 만약 key 혹은 value 가 128bytes 이상이라면, go 는 map 내 bucket에 직접적으로 저장하지 않는다. 대신 go 는 key나 value에 대한 참조를 가리키는 pointer를 저장한다.
 
