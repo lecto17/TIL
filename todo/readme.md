@@ -2,8 +2,6 @@
 
   [some article]
 
-    - https://teivah.medium.com/maps-and-memory-leaks-in-go-a85ebe6e7e69
-
     - https://velog.io/@jch9537/React-manifest.json
 
     - https://dev-event.vercel.app/events
@@ -21,6 +19,14 @@
     - https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=happylight&logNo=221412576943
 
     - react 내에서도 vue의 watch 같은 유사한 기능을 구현해주는 것 - https://react-hook-form.com/api/useform/watch/
+
+    - chatGPT: https://www.btcc.com/ko-KR/academy/crypto-basics/what-is-chatgpt
+
+    - 코파일럿: https://namu.wiki/w/GitHub%20Copilot
+
+  [SD(Server-Driven) ui]
+
+    - https://brunch.co.kr/@advisor/37
 
   [개발 글쓰기]
 
