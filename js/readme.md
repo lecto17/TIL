@@ -1,3 +1,8 @@
+* for in / for of 차이
+
+  <img width="184" alt="image" src="https://user-images.githubusercontent.com/53415000/211200903-6c91428b-5b9f-4e47-bbfd-e2612bf370c4.png">
+
+
 * js 메모리 누수
 
   cf) https://ui.toast.com/posts/ko_20210611 글을 정리한 내용입니다.
