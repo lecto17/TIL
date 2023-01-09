@@ -1,3 +1,9 @@
+* 쉬프트 엔터 감지
+
+  - https://stackoverflow.com/questions/3044083/what-is-the-key-code-for-shifttab
+
+  - event의 shift키를 감지하는 e.shiftKey(boolean 값) && e.keyCode 값을 비교하면 된다.
+
 * for in / for of 차이
 
   <img width="184" alt="image" src="https://user-images.githubusercontent.com/53415000/211200903-6c91428b-5b9f-4e47-bbfd-e2612bf370c4.png">
