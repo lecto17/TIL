@@ -1,6 +1,6 @@
 * 추후 정리할 내용입니다.
 
-  [some article]
+  [some article]     
 
     - https://velog.io/@jch9537/React-manifest.json
 

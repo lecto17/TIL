@@ -64,11 +64,11 @@
 
 
       ```
-        type hmap struct {
-           B uint8 // log_2 of # of buckets
-	           // (can hold up to loadFactor * 2^B items)
-	   // ...
-	}
+         type hmap struct {
+            B uint8 // log_2 of # of buckets
+	            // (can hold up to loadFactor * 2^B items)
+	    // ...
+         }
 	
       ```
 
@@ -107,3 +107,18 @@
       - 만약 높은 메모리 소비를 유발한다면, go가 map을 re-create 하게 하거나 혹은 pointer를 사용하여 map의 크기를 최적화 시킬 수 있는지 고려해야한다.
 
 
+[ go struct ]
+
+  - 참조 링크입니다.
+
+    cf) https://dev.to/deadlock/golang-writing-memory-efficient-and-cpu-optimized-go-structs-2ick
+
+    cf) https://anandadwirahma.medium.com/save-memory-in-golang-by-compose-struct-correctly-f649d1f457dd
+
+  - 위 링크에서는 말하는 내용은 대략 기록하였습니다.
+
+    - go 에서 구조체의 크기는 각 필드들의 합보다 더 큰 크기를 갖고 있을 수 있다.
+
+    - 이러한 이유는 memory allocation에 있다. 
+
+    - 구조체를 작성할 떄, 필드의 크기가 내림차순 순으로 작성하는 것이 가장 메모리를 최적화할 수 있는 방법이다.
