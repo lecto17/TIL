@@ -1,3 +1,7 @@
+* debounce in react
+
+  cf) https://www.developerway.com/posts/debouncing-in-react?utm_source=reactdigest&utm_medium&utm_campaign=1473
+
 * React 18
 
   cf) https://tech.osci.kr/2022/05/03/react-18v/
