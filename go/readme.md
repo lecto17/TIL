@@ -1,3 +1,20 @@
+### chatGPT's Answer about 'which is better go, nodejs'
+
+  <quote>
+    Both Go and Node.js are popular choices for building web applications and microservices, but they have different design philosophies and are better suited to different types of projects.
+
+    Go, also known as Golang, is a statically-typed language that is designed to be simple, efficient, and scalable. It has a small number of core language features and a clean, minimalist syntax. Go was developed by Google specifically for building high-performance, concurrent systems, and it has excellent support for concurrency and parallelism. It's a good choice for building high-performance servers, networking services, and other low-level systems.
+
+    Node.js, on the other hand, is built on top of JavaScript, and it's designed to be a flexible, easy-to-use platform for building web applications. Node.js has a large and vibrant ecosystem, with thousands of libraries and frameworks available to help you build anything from simple command-line tools to complex web applications. Node.js uses an event-driven, non-blocking I/O model, which makes it well-suited for building real-time, data-intensive applications, like chat, gaming and live-streaming.
+
+    So, to sum up:
+
+    Go is a good choice for building high-performance, concurrent systems, networking services, and other low-level systems.
+    Node.js is a good choice for building web applications, real-time and data-intensive applications, and other apps that require a lot of I/O operations.
+    The choice between the two languages depends on the specific requirements and the use-case of your project.
+  </quote>
+
+
 [ memory leak of map ]
 
   * 다음 블로그를 참조하여 정리한 내용입니다.
