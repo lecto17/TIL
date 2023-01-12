@@ -1,7 +1,8 @@
 * 추후 정리할 내용입니다.
 
   [some article]
-  
+    - https://velog.io/@broccoliindb/onBlur-on-react
+
     - https://drmutterl.tistory.com/entry/React-%ED%8F%B4%EB%8D%94-%EA%B5%AC%EC%A1%B0-%EC%9E%90%EC%A3%BC-%EC%93%B0%EB%8A%94-%ED%8F%B4%EB%8D%94%EB%AA%85
 
     - https://velog.io/@jch9537/React-manifest.json
