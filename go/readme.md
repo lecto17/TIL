@@ -1,4 +1,112 @@
+ ### concurrency, parallelism(1)
+
+    * parallelism 이란, 매우 간단하게 두 명령어(instructions)가 동시에 병렬적으로 실행되는 것을 의미한다.(기존에 순차적인 실행되는 방식과는 다르게).
+
+      * more often than not: 종종, 자주
+
+    * Concurrency란 디자인 패턴이다. 이것은 어떤 것을 만드는 방법 중 하나이다. concurrency는 parallelism을 가능하게 하지만, parallelism을 보장하지는 않는다.
+
+    ```
+      fucntion test() {
+	 callA();
+	 callB();
+      }
+    ```
+
+    * 위 예제에서 callA라는 함수가 서로 다른 CPU thread에서 호출될 수 있다면, 이것은 concurrency이다. 그러나 callA라는 함수가 서로 다른 thread에서 호출될 것이란 것을 보장하지는 않는다. 왜냐하면 오직 하나의 thread만 갖고 있는 경우도 있을 수 있기 때문이다.
+
+    * <quote>Parallelism is not the goal of concurrency, concurrency's goal is a good structure</quote>
+
+    ```
+        package main
+
+	import (
+	    "fmt"
+	)
+
+	func main() {
+	    woof()
+	    meow()
+	}
+
+	func woof() {
+	    for i := 1; i <= 5; i++ {
+		fmt.Println("woof ", i)
+	    }
+	}
+
+	func meow() {
+	    for i := 1; i <= 5; i++ {
+		fmt.Println("meow ", i)
+	    }
+	}
+
+    ```
+
+    * 위 코드에서는 woof 함수와 meow함수가 순차적으로 실행된다. 만약 parallel execution이 가능하게 하려면 `go` keyword를 명령어 바로 앞에다 붙여서 사용한다.
+
+    ```
+	go woof()
+	meow()
+    ```
+
+    * 위 함수의 실행결과는 어떻게 될까? 신기하게도 meow 함수의 결과만 출력된다. concurrency를 언급할 때, parallel lanes들이 있고, 각각의 명령들이 고유한 lane에서 다른 것들과 병렬적으로 실행되는 것으로 생각하곤 한다. 이 각각의 lane들은 흔히 말하는 <b>goroutine</b>이다. 순차적으로 실행시키는 코드에서는 각각의 함수(ex, woof, meow)가 main goroutine 하나에서 실행이 된다.
+
+    * go woof()를 통해 새로운 goroutine을 만들었지만, 실행 결과가 출력이 되지 않았다. 이러한 이유는 woof가 실행되는 고루틴에서 출력을 print하기 전에, 메인 고루틴이 다음 명령어(meow)를 실행해버렸고 이후 meow 다음으로 실행될 항목이 없음을 확인하고 종료해버렸기 때문이다. 메인 고루틴이 종료되면 다른 모든 고루틴들을 자동으로 종료시키는 특성이 있다. 결론적으로 결과물이 출력이 안된 것은 print하기 전에 woof함수의 routine이 종료되었기 때문이다.
+
+    * <b>그렇다면... 어떻게 하면 이러한 문제를 피할 수 있을까?</b>
+
+      * 그것은 바로... !, `WaitGroup`이란 것을 사용하는 것이다.
+
+      * WaitGroup은 두 함수를 실행시키는데 필수적인 synchronization을 제공한다. 아래 코드를 참조해 이해보면 좋다.
+
+      ```
+	import (
+	    "fmt"
+	    "runtime"
+	    "sync"
+	)
+
+	var wg sync.WaitGroup
+
+	func main() {
+	    // add one thing to wait for
+	    wg.Add(1)
+	    go woof()
+	    meow()
+
+	    // stop waiting when 0 things in waiting list
+	    wg.Wait()
+	}
+
+	func woof() {
+	    for i := 1; i <= 5; i++ {
+		fmt.Println("woof ", i)
+	    }
+	    // remove one thing from waiting list
+	    wg.Done()
+	}
+
+	func bar() {
+	    for i := 1; i <= 5; i++ {
+		fmt.Println("meow ", i)
+	    }
+	}
+      ```
+
+      * 이제 프로그램을 실행하면, 두 함수의 결과를 모두 볼 수 있게 된다.
+
+      * 무슨 일이 일어난 걸까?
+
+        * woof 함수를 실행하기 전에, waiting list에 1 thing을 넣은 후에 프로그램은 woof 함수 실행을 위한 goroutine을 실행시킨다. 그리고 다음으로 실행할 명령어인 meow로 이동한다. 하지만 이번에는 프로그램을 끝내는 대신, waiting list가 빈 상태가 될 때까지 기다리게 하는 `wg.Wait()`을 마주하게 되었다. 위 코드에 woof 함수 내에 서 `wg.Done()`이 있는데, 이것은 기본적으로 프로그램에게 프로세스가 종료되었고 waiting list에서 나와도 된다는 것을 알려주는 것이다.
+
+
+    * 관련 posting이 2개 더 있는데 이거 관련 내용은 추후 작성하도록 하자.
+
+    cf) https://dev.to/rinkiyakedad/concurrency-in-golang-45d4
+
 ### chatGPT's Answer about 'which is better go, nodejs'
+
 
   <quote>
     Both Go and Node.js are popular choices for building web applications and microservices, but they have different design philosophies and are better suited to different types of projects.
