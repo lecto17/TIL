@@ -28,3 +28,28 @@
     console.log(typeof foo); // object
 
   ```
+
+* 타입 추론
+
+  - 타입 선언을 생략하면 값이 할당되는 과정에서 동적으로 타입이 결정된다. 이를 타입 추론이라고 한다.
+
+
+* 타입 캐스팅
+
+  - 기존의 타입에서 다른 타입으로 타입 캐스팅하려면 as 키워드를 사용하거나 <> 연산자를 사용할 수 있다.
+
+
+  ```
+    const $input = document.querySelector('input[type="text"]'); // input: Element | null
+
+    const val = $input.value; // Error, 'Element' 타입에 value라는 property가 없기 때문에. 
+
+
+    => 아래와 같이 변경
+
+    1. const $input = document.querySelector('input[type="text"]') as HTMLInputElement;
+
+    OR
+
+    const $input = <HTMLInputElement>document.querySelector('input[type="text"]');
+  ```
