@@ -53,3 +53,12 @@
 
     const $input = <HTMLInputElement>document.querySelector('input[type="text"]');
   ```
+
+
+  * 클래스
+
+    - ES6 클래스는 클래스 몸체에 '메소드'만을 포함할 수 있다. 클래스 몸체에 프로퍼티를 선언할 수 없고, 반드시 생성자 내부에서 클래스 프로퍼티를 선언하고 초기화한다.
+
+    - typescript 클래스는 클래스 몸체에 클래스 프로퍼티를 사전 선언해야 한다.
+
+    - typescript의 클래스는 접근 제한자를 명시하지 않았을 때, 다른 클래스 기반 언어의 경우, 암묵적을 protected로 지정되어 패키지 레벨로 공개되지만, typescript의 경우, 접근 제한자를 생략한 클래스 프로퍼티와 메소드는 암묵적으로 public을 선언됨.
