@@ -79,3 +79,85 @@
     - static 키워드를 클래스 프로퍼티에도 사용할 수 있다. 정적 메서드와 마찬가지로 정적 클래스 프로퍼티는 인스턴스가 아닌 클래스 이름으로 호출하며 클래스의 인스턴스를 생성하지 않아도 호출할 수 있다.
 
 
+  * 덕 타이핑(Duck typing)
+
+    - 인터페이스를 구현하였다는 것만이 타입 체크를 통과하는 유일한 방법은 아니다. 타입 체크에서 중요한 것은 값을 실제로 가지고 있는 것이다.
+
+    ```
+        interface IDuck { // 1
+	  quack(): void;
+	}
+
+	class MallardDuck implements IDuck { // 3
+	  quack() {
+	    console.log('Quack!');
+	  }
+	}
+
+	class RedheadDuck { // 4
+	  quack() {
+	    console.log('q~uack!');
+	  }
+	}
+
+	function makeNoise(duck: IDuck): void { // 2
+	  duck.quack();
+	}
+
+	makeNoise(new MallardDuck()); // Quack!
+	makeNoise(new RedheadDuck()); // q~uack! // 5
+
+
+	/**
+	 * typescript는 해당 인터페이스에서 정의한 프로퍼티나 메서드를 가지고 있다면 그 인터페이스를 구현한 것으로 인정한다. 이를 "덕 타이핑(duck typing) 또는 구조적 타이핑(structural typing)"이라 한다.
+	 */
+
+	interface IPerson {
+	  name: string;
+	}
+
+	function sayHello(person) {
+	  console.log("Hello " + person.name);
+	}
+	
+	var me = { name: 'Lee', age: 18 };
+	sayHello(me); // Hello Lee
+
+	// 변수 me는 인터페이스 IPerson과 일치하지 않는다. 하지만 IPerson의 name 프로퍼티를 가지고 있으면 인터페이스에 부합하는 것으로 인정된다. 인터페이스는 개발 단계에서 도움을 주기 위해 제공되는 기능일 뿐 JS의 표준은 아님. 따라서 위 예제의 typescript 파일을 js파일로 트랜스파일링하면 아래와 같이 인터페이스가 삭제된다.
+
+	function sayHello(person) {
+	  console.log("Hello " + person.name);
+	}
+
+	var me = { name: 'Lee', age: 18 };
+	sayHello(me); // Hello Lee
+    ```
+
+    - 선택적 프로퍼티
+
+      - 인터페이스의 프로퍼티는 반드시 구현되어야 한다.
+
+      - 만약 프로퍼티명 뒤에 ?를 붙이면 '선택적 프로퍼티(Optional Property)'로 해당 프로퍼티를 생략하여도 에러가 발생하지 않는다.
+
+    - 인터페이스는 extends 키워드를 사용하여 인터페이스 혹은 클래스를 상속받을 수 있다. (복수개의 인터페이스를 상속 받을 수도 있다.
+
+    ```
+      interface IPerson {
+	  name: string;
+	  age?: number;
+      }
+
+      interface IDeveloper {
+	 skills: string[];
+      }
+
+      interface IWebDeveloper extends IPerson, IDeveloper {}
+
+      const webDeveloper: IWebDeveloper = {
+	  name: "Lee",
+	  age: 20,
+	  skills: ['HTML' ,'CSS', 'JavaScript']
+      }
+    ```
+
+    - 인터페페이스는 클래스를 상속받을 수 있는데, 클래스의 모든 멤버(public, protected, private)가 상속되지만 구현까지 상속하지는 않는다.
