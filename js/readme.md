@@ -1,3 +1,39 @@
+* 읽어야 할 책 목록
+
+  gpt가 추천해준 도서
+
+  - "JavaScript: The Good Parts" by Douglas Crockford
+이 책은 자바스크립트 언어의 핵심 개념과 사용법에 초점을 맞춘 베스트셀러입니다. 자바스크립트의 장단점을 잘 설명하고, 좋은 부분에 집중하여 핵심 개념을 익힐 수 있도록 도와줍니다.
+
+"Eloquent JavaScript" by Marijn Haverbeke
+이 책은 자바스크립트 프로그래밍 언어를 학습하기 위한 훌륭한 자료입니다. 초보자부터 중급자까지 다양한 수준의 내용을 다루고 있으며, 실제 예제와 연습문제를 통해 실력을 향상시킬 수 있도록 구성되어 있습니다.
+
+"CSS Secrets" by Lea Verou
+이 책은 CSS의 고급 기술과 비법을 알려주는 책입니다. 다양한 CSS 속성과 트릭, 기술적인 해결책을 소개하며, 웹 디자인과 프론트엔드 개발에서 더 나은 결과를 얻을 수 있는 방법을 알려줍니다.
+
+"React Up and Running" by Stoyan Stefanov
+이 책은 React를 사용하여 현대적인 웹 애플리케이션을 개발하는 방법을 알려줍니다. React의 기본 개념부터 실전 프로젝트까지 다루며, 효율적인 컴포넌트 구성과 상태 관리, 라우팅 등을 배울 수 있습니다.
+
+"The Pragmatic Programmer" by Andrew Hunt and David Thomas
+이 책은 프로그래머로서의 실력 향상을 위한 가이드로서, 프로그래밍 원리와 실무적인 조언을 제공합니다. 코드 작성, 디버깅, 테스팅, 리팩토링, 커뮤니케이션 등 개발자로서 필요한 다양한 측면을 다루고 있습니다.
+
+"Learning Web Design" by Jennifer Niederst Robbins
+이 책은 웹 디자인과 프론트엔드 개발에 초점을 맞춘 입문서입니다. HTML, CSS, 그리고 웹 디자인 기초에 대해 상세히 설명하며, 실제 예제와 튜토리얼을 통해 실력을 키울 수 있도록 구성되어 있습니다.
+
+"JavaScript: The Definitive Guide" by David Flanagan
+이 책은 자바스크립트 언어의 전체적인 내용을 상세히 다루고 있으며, ES6 이후의 최신 기능까지 포함하고 있습니다. 자바스크립트의 핵심 문법과 개념, 객체 지향 프로그래밍, DOM 조작, 비동기 프로그래밍 등을 포괄적으로 다루고 있습니다.
+
+"CSS: The Definitive Guide" by Eric A. Meyer and Estelle Weyl
+이 책은 CSS의 깊이 있는 내용을 다루고 있으며, CSS의 다양한 기능과 속성, 레이아웃, 반응형 웹 디자인 등을 상세하게 설명합니다. 웹 개발자로서 CSS에 대한 심도 있는 이해를 갖추기 위한 필수 참고서입니다.
+
+"Vue.js: Up and Running" by Callum Macrae
+이 책은 Vue.js 프레임워크에 초점을 맞춘 입문서입니다. Vue.js의 기본 개념과 사용법을 알기 쉽게 설명하며, 실전 프로젝트를 통해 Vue.js를 활용한 웹 애플리케이션 개발 방법을 익힐 수 있습니다.
+
+"The Design of Everyday Things" by Don Norman
+이 책은 사용자 인터페이스와 상호작용 설계에 대한 기본 원칙과 이론을 다루는 UX 디자인의 고전적인 책입니다. 사용자 중심의 설계에 대한 통찰력을 제공하며, 웹 애플리케이션 개발에서 사용자 경험을 개선하는 데 도움이 됩니다.
+
+
+
 * 쉬프트 엔터 감지
 
   - https://stackoverflow.com/questions/3044083/what-is-the-key-code-for-shifttab
