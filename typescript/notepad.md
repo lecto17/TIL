@@ -1,3 +1,150 @@
+### type과 interface의 차이
+
+  #### 확장(상속)하는 법
+
+  * interface
+
+    * extends 키워드를 이용해서 확장할 수 있다.
+
+    ```
+        interface Person {
+	  name: string;
+	  age: number;
+	}
+
+	interface Student extends Person { // 확장(상속)
+	  school: string;
+	}
+
+	const jieun: Student = {
+	  name: 'jieun',
+	  age: 27,
+	  school: 'HY'
+	}
+    ```
+
+    * type
+      
+      * & 기호를 이용해서 확장할 수 있다.
+
+      ```
+        type Person = {
+	  name: string,
+	  age: number
+	}
+
+	type Student = Person & { // 확장(상속)
+	  school: string
+	}
+
+	const jieun: Student = {
+	  name: 'jieun',
+	  age: 27,
+	  school: 'HY'
+	}
+      ```
+  #### 선언적 확장
+
+    * interface
+
+      * <b>선언전 확장</b>(Declaration Merging)이 가능하다.
+        (같은 이름의 interface를 선언하면, 자동으로 확장된다.)
+
+      ```
+        interface Person {
+	  name: string;
+	  age: number;
+	}
+
+	interface Person { // 선언적 확장
+	  gender: string;
+	}
+
+	const jieun: Person = {
+	  name: 'jieun',
+	  age: 27,
+	  gender: 'female'
+	}
+      ```
+
+    * type
+      
+      * 선언적 확장이 <b>불가능</b>하다.
+
+      ```
+        type Person = {
+	  name: string;
+	  age: number;
+	}
+
+	type Person = { // ❗️Error: Duplicate identifier 'Person'.
+	  gender: string;
+	}
+      ```
+   > => 따라서 타입 객체의 확장성을 위해서는 interface를 사용하는 것이 더 좋다.
+
+   
+   ### 자료형(type)
+
+     * interface
+       
+       * 객체(Object) 타입을 설정할 때 사용할 수 있으며, 원시 자료형에는 사용할 수 없다.
+       ```
+        interface Person {
+	  name: string;
+	  age: number;
+	  gender: string;
+	}
+
+	interface name extends string { // ❌ 불가능
+	  ...
+	}
+       ```
+     * type
+
+       * 객체타이븡ㄹ 정희할 때도 사용할 수 있지만, 객체 타입을 정의할 때는 interface를 사용하는게 좋고, 단순한<b>원시값(Primitive Type)</b>이나 <b>튜플(Tuple)</b>, <b>유니언(Union)</b>타입을 선언할 때 type을 사용하는 것이 더 좋다.
+
+       ```
+        type Name = string; // primitive
+	type Age = number;
+	type Person = [string, number, boolean]; // tuple
+	type NumberString = string | number; // union
+	type Person = { // 객체는 interface를 사용하도록 하자.
+	  name: string,
+	  age: number,
+	  gender: string
+	}
+       ```
+   ### computed value 사용
+
+     * interface
+       
+       * computed value 사용이 <b>불가능</b>하다.
+
+       ```
+        type Subjects = 'math' | 'science' | 'sociology';
+
+	interface Grades {
+	  [key in Subjects]: string; // ❗️Error: A mapped type may not declare properties or methods.
+	}
+       ```
+
+     * type
+
+       * computed value 사용이 가능하다.
+
+       ```
+	type Subjects = 'Math' | 'Science' | 'Sociology';
+
+	type Grades = {
+	  [key in Subjects]: string;
+	}
+       ```
+  > 결론
+  > 
+  > type은 <b>모든 타입<b/>을 선언할 때 사용할 수 있고, interface는 <b>객체에 대한 타입</b> 을 선언할 때만 사용할 수 있다.
+  > 또한 <b>확장 불가능</b>한 타입을 선언하고 싶다면 type을 사용하면 되고, <b>확장 가능</b>한 타입을 선언하고 싶다면 interface를 사용하면 된다.
+
 
 * type 호환
 
