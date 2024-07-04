@@ -1,4 +1,67 @@
 ** css 상식 
+ - css와 sass(Syntatically Awesome Style Sheets) 차이
+   
+   css를 사용해 style을 적용할 경우,
+
+     1. 선택자(Selector)를 지정할 때, 불필요한 부모 요소 선택자를 매번 적어야 한다.
+
+     2. 프로젝트 규모가 커져감에 따라 중복해서 수정해야 되는 부분이 늘어난다. 가령, 반복적으로 사용된 부모 요소 선택자의 이름이 변경 된 경우.
+
+     3. 연산 기능에 한계가 있다.
+
+     4. 구문이 존재하지 않는다.
+
+   -> 따라서 sass는 css의 태생적 한계를 보완하기 위해 아래와 같은 기능을 제공한다.
+
+     1. 변수의 사용
+
+     2. 조건문과 반복문
+
+     3. import
+
+     4. 중첩(nesting)
+
+     5. mixin
+
+     6. extend / inheritance
+
+ - word-break와 word-wrap의 차이 
+
+   이 정도까지 알아야 싶나 하지만, 혹시나 하는 마음에 어느정도 큰 틀만 알고 다음에 다시 보기 위해 해당 내용 관련해서 캡처한 것을 올린다.
+   
+   참고 사이트: cf)https://wit.nts-corp.com/2017/07/25/4675
+   
+   word-break 속성:
+
+   ![image](https://user-images.githubusercontent.com/53415000/148174541-7ef24ee2-1588-4402-b762-cb344f2eb525.png)
+      
+   
+   <br/>
+   word-wrap 속성:
+   
+   ![image](https://user-images.githubusercontent.com/53415000/148174651-87321c04-a87c-4d0f-a82e-52fac866c9c9.png)
+   
+   미세한 차이가 있는 듯하다.
+
+
+ - overflow-wrap: break-word vs word-break: break-word
+
+  ![image](https://user-images.githubusercontent.com/53415000/148054710-437d9cfe-88df-4e64-9bdb-00cf77492887.png)
+  
+  요약해서 정리하자면,
+
+  - overflow-wrap: word-break (<=> break-words, tailwind에서 같은 표현)
+
+  ![image](https://user-images.githubusercontent.com/53415000/148173454-68534762-d8a0-4cd3-b7a5-2e24a9bee215.png)
+
+  - word-break: break-all(<=> break-all, tailwind에서 같은 표현)
+
+  ![image](https://user-images.githubusercontent.com/53415000/148173592-974f5060-aa95-49a8-b6ec-e0a81ecb9609.png)
+
+
+  - word-wrap: word-break
+
+
 
  - self-start(<=> align-self: flex-start)
 
