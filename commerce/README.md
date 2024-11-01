@@ -9,11 +9,13 @@
 - 실시간 분석: 1시간 단위의 스토어 거래 정보를 실시간으로 제공
 - 판매 분석: 배송 통계, 판매 성과, 상품별 결제 데이터
 
-￼
+![image](https://github.com/user-attachments/assets/376ef164-8264-4e4e-ace8-8029e63538ef)
 
 ### 고객 활동 분석을 돕는 툴로 GA(Google Analytics), GTM(Google Tag Manger)들이 있는데, 이 둘의 차이를 짚어보자.
 
 ### GTM
+
+![img](https://github.com/user-attachments/assets/e1e5e2ee-ea1d-4742-bea8-59882d0b0273)
 
 - GTM 스크립트를 삽입한 뒤, GA 혹은 다른 툴로 연결한다.
 - 여러 툴(GA, Facebook 등)을 사용할 수 있게 해주는 중간 다리 역할을 한다.
@@ -23,6 +25,8 @@
   - 자바스크립트 추적코드 관리 가능(GA는 이 심어진 코드를 바탕으로 분석 보고서를 제공한다.)
 
 ### GA
+
+![Google Analytics](https://github.com/user-attachments/assets/fb9aa3bc-bcda-419d-981c-ff2b6124e182)
 
 - GA 스크립트, 로그 수집 코드를 삽입할 수 있다.
 - 유입 및 행동 레포트에 따라 목표 전환이 가능하다.
