@@ -1,6 +1,5 @@
 ## 일렉트론
-
-
+![Image](https://github.com/user-attachments/assets/4efa56bc-d624-4b87-954f-fe5f1eac8074)
 
 ### 작동 방식
  - 일렉트론에는 두가지 프로세스 존재: 메인(Main) 프로세스와 렌더러(Renderer) 프로세스.
